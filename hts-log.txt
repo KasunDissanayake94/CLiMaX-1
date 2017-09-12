@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 12 Sep 2017 16:39:02 at http://demos.bootdey.com/?theme=dayday +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qiC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://demos.bootdey.com/?theme=dayday -O1 "C:\My Web Sites\test" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:39:05	Error: 	"Forbidden" (403) at link https://10.22.252.242/sgerror.php?url=403%20&a=10.22.22.25&n=10.22.22.25&i=&s=default&t=blk_BL_adv&u=http://cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=bootdeycom (from demos.bootdey.com/?theme=dayday)
+16:39:05	Warning: 	Moved Permanently for demos.bootdey.com/dayday
+16:39:05	Warning: 	File has moved from demos.bootdey.com/dayday to http://demos.bootdey.com/dayday/
+16:39:05	Error: 	Unable to save file C:/My Web Sites/test/demos.bootdey.com/dayday: Permission denied
+16:39:25	Warning: 	File not parsed, looks like binary: demos.bootdey.com/dayday/bootstrap.3.3.6/fonts/glyphicons-halflings-regular.woff2
+16:39:25	Warning: 	File not parsed, looks like binary: demos.bootdey.com/dayday/font-awesome.4.6.1/fonts/fontawesome-webfont.woff2?v=4.6.1
+16:39:37	Error: 	"Not Found" (404) at link demos.bootdey.com/dayday/photos.html (from demos.bootdey.com/dayday/photos1.html)
+16:39:38	Error: 	"Not Found" (404) at link demos.bootdey.com/dayday/assets/css/assets/plugins/superbox/img/close.gif (from demos.bootdey.com/dayday/assets/css/photos2.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 36 seconds : 130 links scanned, 124 files written (4585964 bytes overall), 32 files updated [138944 bytes received at 3859 bytes/sec], 665531 bytes transferred using HTTP compression in 34 files, ratio 14%, 11.9 requests per connection
+(4 errors, 4 warnings, 0 messages)
