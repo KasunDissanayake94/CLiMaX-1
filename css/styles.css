@@ -285,3 +285,21 @@ small.text-muted {
     padding-left:3px;
   }
 }
+
+/*
+ * our styles
+ * --------------------------------------------------
+ */
+.categories div{
+	padding: 10px 10px 10px 20px;
+	background-color: #C7C7C7;
+	height: 100px;
+	margin: 10px;
+}
+.categories div:hover{
+	background-color: #9B9B9B;
+}
+.categories{
+	margin-left: 80PX;
+	background-color: #f2f2f2;
+}
