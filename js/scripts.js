@@ -10,3 +10,20 @@ $('[data-toggle=offcanvas]').click(function() {
     $('#btnShow').toggle();
 });
 });
+
+//fixing the position of categories after scroling
+$(window).scroll(function() {
+		
+    var window_top = $(window).scrollTop();
+	
+    var  div_top= $('#sticky-anchor').offset().top;
+	alert(div_top);
+    if (window_top > div_top) {
+        $('#sticky').addClass('stick');
+        $('#sticky-anchor').height($('#sticky').outerHeight());
+    } else {
+        $('#sticky').removeClass('stick');
+        $('#sticky-anchor').height(0);
+    }
+});
+    
