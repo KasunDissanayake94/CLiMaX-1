@@ -300,6 +300,13 @@ small.text-muted {
 	background-color: #9B9B9B;
 }
 .categories{
-	margin-left: 80PX;
+	
 	background-color: #f2f2f2;
+}
+#sticky.stick {
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    border-radius: 0 0 0.5em 0.5em;
 }
