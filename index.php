@@ -96,23 +96,9 @@ if (empty($errors)) {
                           </div>
                         </div>
                     </form>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="">Dashbord</a></li>
-                          <li><a href="">Settings</a></li>
-                          <li><a href="">Logout</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+                    
                     <ul class="nav navbar-nav pull-right">
-                      <li>
-                        <a href="view/userhome.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                      </li>
-                      <li>
-                        <a href="#postModal" role="button" data-toggle="modal"> Post</a>
-                      </li>
+                     
                       <li>
                         <a href="view/login-form.php"><span class="badge">Sign In</span></a>
                       </li>
@@ -139,19 +125,19 @@ if (empty($errors)) {
                             <div class="categories col-sm-2" id="sticky">
                              
                          	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
+                         		<img src="images/transport_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 2</p>
+                                <img src="images/technology_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class=" col-xs-12 ">
-                         		<p>category 3</p>
+                                <img src="images/education_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 4</p>
+                                <img src="images/social_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 5</p>
+                                <img src="images/other_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          </div> 
 
@@ -221,12 +207,6 @@ if (empty($errors)) {
                             
                           </div>
                        </div><!--/row-->
-                      
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
-                          </div>
-                        </div>
                       
                         <div class="row" id="footer">    
                           <div class="col-sm-6">
