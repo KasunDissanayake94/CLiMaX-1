@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 06:53 AM
+-- Generation Time: Sep 15, 2017 at 07:06 AM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -52,6 +52,7 @@ DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
   `com_id` int(255) NOT NULL AUTO_INCREMENT,
   `comment` varchar(1000) NOT NULL,
+  `com_date` datetime DEFAULT NULL,
   `cust_id` int(255) NOT NULL,
   PRIMARY KEY (`com_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -60,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`com_id`, `comment`, `cust_id`) VALUES
-(1, 'I have the same problem. What we can do???\r\n', 2);
+INSERT INTO `comment` (`com_id`, `comment`, `com_date`, `cust_id`) VALUES
+(1, 'I have the same problem. What we can do???\r\n', '2017-09-15 02:10:24', 2);
 
 -- --------------------------------------------------------
 
@@ -120,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `customer_problem` (
   `cust_id` int(255) NOT NULL,
   `prob_id` int(255) NOT NULL,
   `prob_description` varchar(1000) NOT NULL,
+  `prob_date` datetime DEFAULT NULL,
   `cat_id` int(255) NOT NULL,
   `rate` int(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`cust_id`,`prob_id`)
@@ -129,8 +131,8 @@ CREATE TABLE IF NOT EXISTS `customer_problem` (
 -- Dumping data for table `customer_problem`
 --
 
-INSERT INTO `customer_problem` (`cust_id`, `prob_id`, `prob_description`, `cat_id`, `rate`) VALUES
-(1, 1, 'I think all of you have this problem. "Why don''t bus conductors give change?" Can''t we solve this problem.', 1, 0);
+INSERT INTO `customer_problem` (`cust_id`, `prob_id`, `prob_description`, `prob_date`, `cat_id`, `rate`) VALUES
+(1, 1, 'I think all of you have this problem. "Why don''t bus conductors give change?" Can''t we solve this problem.', '2017-09-14 10:14:27', 1, 0);
 
 -- --------------------------------------------------------
 
