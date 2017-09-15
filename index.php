@@ -42,23 +42,9 @@
                           </div>
                         </div>
                     </form>
-                    <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="">Dashbord</a></li>
-                          <li><a href="">Settings</a></li>
-                          <li><a href="">Logout</a></li>
-                        </ul>
-                      </li>
-                    </ul>
+                    
                     <ul class="nav navbar-nav pull-right">
-                      <li>
-                        <a href="view/userhome.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
-                      </li>
-                      <li>
-                        <a href="#postModal" role="button" data-toggle="modal"> Post</a>
-                      </li>
+                     
                       <li>
                         <a href="view/login-form.php"><span class="badge">Sign In</span></a>
                       </li>
@@ -168,19 +154,13 @@
                           </div>
                        </div><!--/row-->
                       
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
-                          </div>
-                        </div>
-                      
                         <div class="row" id="footer">    
                           <div class="col-sm-6">
                             
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">TryCatch++ ©Copyright 2017</a>
+                            <a href="#" class="pull-right">TryCatch++ ï¿½Copyright 2017</a>
                             </p>
                           </div>
                         </div>
@@ -201,7 +181,7 @@
   <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			Update Status
       </div>
       <div class="modal-body">
