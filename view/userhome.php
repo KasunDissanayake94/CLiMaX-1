@@ -127,7 +127,11 @@
                                </div>
                             
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
+                                 <div class="panel-heading">
+                                  <a href="#" class="pull-right">View all</a> <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true"></span>
+                                  <h4>Stackoverflow</h4>
+                                  
+                                 </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
                                     <div class="clearfix"></div>
