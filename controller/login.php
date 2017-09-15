@@ -70,7 +70,7 @@
           	echo 'view/receptionist-home.php';
           }
           elseif ($type == "Customer") {
-          	echo 'index.php';
+          	echo 'userhome.php';
           }
 
        }
