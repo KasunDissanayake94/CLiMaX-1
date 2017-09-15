@@ -1,9 +1,7 @@
+<?php require_once '../model/Database.php' ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  
-<!-- Mirrored from demos.bootdey.com/dayday/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Sep 2017 11:09:06 GMT -->
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,11 +48,11 @@
       </div>
     </nav>
     <div class="wrapper">
-          
+
       <div class="parallax filter-black">
-          <div class="parallax-image"></div>             
+          <div class="parallax-image"></div>
           <div class="small-info">
-            
+
             <div class="col-sm-10 col-sm-push-1 col-md-6 col-md-push-3 col-lg-6 col-lg-push-3">
               <div class="card-group animated flipInX">
                 <div class="card">
@@ -75,16 +73,14 @@
                         <div class="clearfix"></div>
                       </div>
                       <div class="center">
-                        <a href="profile.html" class="btn  btn-azure">
-                          Login
-                        </a>
+                          <button type="submit" class="btn  btn-azure">Login</button>
                       </div>
                     </form>
                   </div>
                 </div>
-               
+
                 <div class="card">
-                  
+
                   <div class="card-block center">
                     <h4 class="m-b-0">
                       <span class="icon-text">Sign Up</span>
@@ -113,7 +109,7 @@
       </div>
 
       <footer class="footer">
-        
+
         <div class="container">
           <p class="text-muted"> CLiMaX </p>
         </div>
@@ -155,3 +151,4 @@
         </div>
     </div>
 </div>
+
