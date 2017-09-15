@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+
+<?php
+require('../model/Database.php');
+
+// making connection
+$db = new Database();
+$connection = $db->connect();
+
+
+// prepare database query
+    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date,p.prob_id FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
+
+    $result_set = $db->executeQuery($query);
+    //$problemid = "";
+    //$customerid = "";
+
+    $db->verifyQuery($result_set);
+?>
+
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -121,8 +140,78 @@
                                     <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
+
+                <?php
+
+                                    $stock_list="";
+                                    $problemid = "";
+                                  if (mysqli_num_rows($result_set)>0) {
+                                      while($problem = mysqli_fetch_assoc($result_set)){
+                                          $problemid = $problem['prob_id'];
+                                          $stock_list.= "<div class=\"panel panel-default\">";
+                                          $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
+                                          $stock_list.= "<div class=\"panel-body\">";
+                                          $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
+                                          /*$stock_list.= "<td>{$problem['rate']}</td>";*/
+                                          $stock_list.= "<div class=\"clearfix\">
+                                    <!--<hr>
+                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
+                                    Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
+                                    Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.-->
+                                  </div>
+                               </div>";
+                                      }
+                                      $stock_list .= "</tbody>
+                                        </table>";
+                                      echo $stock_list;
+                                      //echo "<hr>
+                                    echo "<form method='POST' action='userhome.php' accept-charset='UTF-8'>
+                                    <div class='input-group'>
+                                      <div class='input-group-btn'>
+                                      <button class='btn btn-default'>+1</button><button class='btn btn-default'><i class='glyphicon glyphicon-share'></i></button>
+                                      </div>
+                                      <input type='text' class='form-control' placeholder='Add a comment..' name='commentValue'>
+                                      <span class='input-group-btn'>
+
+                                       <button name = 'commentBtn' class='btn btn-default' type='button'>Comment</button>
+                                      </span>
+                                    </div>
+                                    </form><hr>";
+                                    //loadComments($problemid);
+                                    $query1 = "SELECT com.*,cus.* FROM comment_2 com,customer cus WHERE cus.cust_id = com.cust_id AND com.prob_id = $problemid";
+
+    $result_set1 = $db->executeQuery($query1);
+
+
+    $db->verifyQuery($result_set1);
+
+     if (mysqli_num_rows($result_set1)>0) 
+     {
+        while($row = mysqli_fetch_assoc($result_set1))
+        {
+            echo "<div class='row'>
+              <div class='col-md-12'>";
+              
+            
+            
+             echo $row['cust_name'];//."<span class="pull-right">4 hours ago</span>"; 
+                    
+             echo "<p>".$row['comment']."</p>";
+              echo "</div>
+              </div>
+                <hr>";
+              }
+            }
+                                    echo "</div>";
+
+                                  } else {
+                                      die("Something happen !!!");
+                                  }
+                              ?>
+
+
                             
-                               <div class="panel panel-default">
+                               <!--<div class="panel panel-default">
                                  <div class="panel-heading">
                                     <div class="row">
                                       <div class="col-md-6">
@@ -184,7 +273,7 @@
                                     <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
                                   </p>
                                 </div>
-                              </div>
+                              </div>-->
                             
                           </div>
                        </div><!--/row-->
@@ -236,7 +325,59 @@
   </div>
 </div>
 	<!-- script references -->
-	
+<?php
+   /* function loadComments($problemID)
+    {
+      //require '../model/Database.php';
+
+      $query1 = "SELECT com.*,cus.* FROM comment_2 com,customer cus WHERE com.prob_id = $problemID";
+
+    $result_set1 = $db->executeQuery($query1);
+
+
+    $db->verifyQuery($result_set1);
+
+     if (mysqli_num_rows($result_set1)>0) 
+     {
+        while($row = mysqli_fetch_assoc($result_set1))
+        {
+            echo "<div class='row'>
+              <div class='col-md-12'>";
+              
+            
+            
+             echo $row['cust_name'];//."<span class="pull-right">4 hours ago</span>"; 
+                    
+             echo "<p>".$row['comment']."</p>";
+              echo "</div>
+              </div>
+                <hr>";
+        }
+      }
+           
+    }*/
+?>
+
+<?php 
+    if(isset($_POST['commentBtn']))
+    {
+      $comment = $_POST['commentValue'];
+      $date = date("Y-m-d");
+      //$time = date("h:i:sa");
+        
+      $query = "SELECT com_id FROM comment_rev";
+      $query_run = mysqli_query($db,$query);
+      
+      $oldno = mysqli_num_rows($query_run);
+      $newno = $oldno + 1;
+      //$prefix = "REV";
+      //$newid = $prefix.$newno;
+      
+      $sql5="INSERT INTO comment_2 VALUES('$newno','$paddyID','$un','$date','$time','$comment','$rating')";
+
+      $res5=mysqli_query($con,$sql5);
+    }
+  ?>
 	
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/scripts.js"></script>

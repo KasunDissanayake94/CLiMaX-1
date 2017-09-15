@@ -1,9 +1,7 @@
-
-
 <!DOCTYPE html>
 
 <?php
-require_once('../model/Database.php');
+require('../model/Database.php');
 
 // making connection
 $db = new Database();
@@ -11,10 +9,11 @@ $connection = $db->connect();
 
 
 // prepare database query
-    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
+    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date,p.prob_id FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
 
     $result_set = $db->executeQuery($query);
-
+    //$problemid = "";
+    //$customerid = "";
 
     $db->verifyQuery($result_set);
 ?>
@@ -90,12 +89,12 @@ $connection = $db->connect();
                 <div class="padding">
                 
                     <div class="full col-sm-9" style="padding: 50px;">
-                      <!--<div class="col-md-6">
+                      <div class="col-md-6">
                        <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
                        <img src="../img/bg.png" >
-                    	  </div>-->
+                    	  </div>
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
@@ -117,22 +116,44 @@ $connection = $db->connect();
                                 </div>
                                 <div class="col-xs-12 ">
                                     <img src="../images/other_logo.jpg" class="category-items">
-                                </div>
+                                </div>>
                          </div> 
 
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right">
-                                <?php
+                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                                <div class="row	"> 
+                                  <div class="well  col-sm-5"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>Tell us your problem</h4>
+                                     <div class="form-group" style="padding:14px;">
+                                      <textarea class="form-control" placeholder="Describe your problem"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                  </form>
+                              </div>
+                              <div class="well col-sm-6 pull-right"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>Tell What us you have</h4>
+                                     <div class="form-group" style="padding:14px;">
+                                      <textarea class="form-control" placeholder="Describe what you got"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                  </form>
+							  </div></div>
+
+                <?php
 
                                     $stock_list="";
+                                    $problemid = "";
                                   if (mysqli_num_rows($result_set)>0) {
                                       while($problem = mysqli_fetch_assoc($result_set)){
+                                          $problemid = $problem['prob_id'];
                                           $stock_list.= "<div class=\"panel panel-default\">";
                                           $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
                                           $stock_list.= "<div class=\"panel-body\">";
                                           $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
                                           /*$stock_list.= "<td>{$problem['rate']}</td>";*/
-                                          $stock_list.= "<div class=\"clearfix\"></div>
+                                          $stock_list.= "<div class=\"clearfix\">
                                     <!--<hr>
                                     Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
                                     Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
@@ -142,12 +163,54 @@ $connection = $db->connect();
                                       }
                                       $stock_list .= "</tbody>
                                         </table>";
+                                        //insertComments.php?id=$problemid
                                       echo $stock_list;
+                                      //echo "<hr>
+                                    echo "<form method='POST' action='insertComments.php?id=$problemid' accept-charset='UTF-8'>
+                                    <div class='input-group'>
+                                      <div class='input-group-btn'>
+                                      <button class='btn btn-default'>+1</button><button class='btn btn-default'><i class='glyphicon glyphicon-share'></i></button>
+                                      </div>
+                                      <input type='text' class='form-control' placeholder='Add a comment..' name='commentValue'>
+                                      <span class='input-group-btn'>
+
+                                       <button name = 'commentBtn' class='btn btn-default' type='submit'>Comment</button>
+                                      </span>
+                                    </div>
+                                    </form><hr>";
+                                    //loadComments($problemid);
+                                    $query1 = "SELECT com.*,cus.* FROM comment_2 com,customer cus WHERE cus.cust_id = com.cust_id AND com.prob_id = $problemid";
+
+    $result_set1 = $db->executeQuery($query1);
+
+
+    $db->verifyQuery($result_set1);
+
+     if (mysqli_num_rows($result_set1)>0) 
+     {
+        while($row = mysqli_fetch_assoc($result_set1))
+        {
+            echo "<div class='row'>
+              <div class='col-md-12'>";
+              
+            
+            
+             echo $row['cust_name'];//."<span class="pull-right">4 hours ago</span>"; 
+                    
+             echo "<p>".$row['comment']."</p>";
+              echo "</div>
+              </div>
+                <hr>";
+              }
+            }
+                                    echo "</div>";
 
                                   } else {
                                       die("Something happen !!!");
                                   }
                               ?>
+
+
                             
                                <!--<div class="panel panel-default">
                                  <div class="panel-heading">
@@ -174,11 +237,44 @@ $connection = $db->connect();
                                     
                                     <p>If you're looking for help with Bootstrap code, the <code>twitter-bootstrap</code> tag at <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a> is a good place to find answers.</p>
                                     
-                                    
+                                    <hr>
+                                    <form>
+                                    <div class="input-group">
+                                      <div class="input-group-btn">
+                                      <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Add a comment..">
+                                      <span class="input-group-addon" id="basic-addon2">Submit</span>
+                                    </div>
+                                    </form>
                                     
                                   </div>
-                               </div>-->
+                               </div>
 
+                               <div class="panel panel-default">
+                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
+                                  <div class="panel-body">
+                                    <ul class="list-group">
+                                    <li class="list-group-item">Modals</li>
+                                    <li class="list-group-item">Sliders / Carousel</li>
+                                    <li class="list-group-item">Thumbnails</li>
+                                    </ul>
+                                  </div>
+                               </div>
+                            
+                               <div class="panel panel-default">
+                                <div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div>
+                                <div class="panel-body">
+                                  <p class="lead">Social Good</p>
+                                  <p>1,200 Followers, 83 Posts</p>
+                                  
+                                  <p>
+                                    <img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                    <img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                    <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
+                                  </p>
+                                </div>
+                              </div>-->
                             
                           </div>
                        </div><!--/row-->
@@ -230,11 +326,61 @@ $connection = $db->connect();
   </div>
 </div>
 	<!-- script references -->
-	
+<?php
+   /* function loadComments($problemID)
+    {
+      //require '../model/Database.php';
+
+      $query1 = "SELECT com.*,cus.* FROM comment_2 com,customer cus WHERE com.prob_id = $problemID";
+
+    $result_set1 = $db->executeQuery($query1);
+
+
+    $db->verifyQuery($result_set1);
+
+     if (mysqli_num_rows($result_set1)>0) 
+     {
+        while($row = mysqli_fetch_assoc($result_set1))
+        {
+            echo "<div class='row'>
+              <div class='col-md-12'>";
+              
+            
+            
+             echo $row['cust_name'];//."<span class="pull-right">4 hours ago</span>"; 
+                    
+             echo "<p>".$row['comment']."</p>";
+              echo "</div>
+              </div>
+                <hr>";
+        }
+      }
+           
+    }*/
+?>
+
+<?php 
+    /*if(isset($_POST['commentBtn']))
+    {
+      $comment = $_POST['commentValue'];
+      $date = date("Y-m-d");
+      //$time = date("h:i:sa");
+      $probID = $_GET['id'];  
+      $query = "SELECT com_id FROM comment_2";
+      $query_run = mysqli_query($db,$query);
+      $user = 1;
+      $oldno = mysqli_num_rows($query_run);
+      $newno = $oldno + 1;
+      //$prefix = "REV";
+      //$newid = $prefix.$newno;
+      
+      $sql5="INSERT INTO comment_2 VALUES('$newno','$probID','$comment',$date,'$user')";
+
+      $res5=mysqli_query($db,$sql5);
+    }*/
+  ?>
 	
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/scripts.js"></script>
-
-
 	</body>
 </html>

@@ -113,8 +113,8 @@ $connection = $db->connect();
                                   </div>
                                </div>";
                                       }
-                                      $stock_list .= "</tbody>
-                                        </table>";
+                                      //$stock_list .= "</tbody>
+                                      //  </table>";
                                       echo $stock_list;
 
                                   } else {
