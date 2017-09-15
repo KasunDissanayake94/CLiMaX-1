@@ -151,9 +151,9 @@
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
+                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
                             
@@ -279,7 +279,7 @@
     document.getElementById("uploadFile").value = this.value;
 };
 document.getElementById("selectedFile1").onchange = function () {
-    document.getElementById("uploadFile1").value = this.value;
+    document.getElementById("uploadFile").value = this.value;
 };
 </script>
 </html>
