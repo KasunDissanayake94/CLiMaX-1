@@ -1,29 +1,9 @@
-
-
 <!DOCTYPE html>
-
-<?php
-require_once('../model/Database.php');
-
-// making connection
-$db = new Database();
-$connection = $db->connect();
-
-
-// prepare database query
-    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
-
-    $result_set = $db->executeQuery($query);
-
-
-    $db->verifyQuery($result_set);
-?>
-
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>CliMax-problems</title>
+		<title>CliMax-Admin</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -66,8 +46,8 @@ $connection = $db->connect();
                       <li class="dropdown" style="background-color:#4D0066;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li style="background-color:#DCC6FF;"><a href="">Your Problems</a></li>
-                          <li><a href="mydonations.php">Donation Plans</a></li>
+                          <li ><a href="myProblems.php">Your Problems</a></li>
+                          <li style="background-color:#DCC6FF;"><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="../index.php">Logout</a></li>
                         </ul>
@@ -122,34 +102,14 @@ $connection = $db->connect();
 
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right">
-                                <?php
-
-                                    $stock_list="";
-                                  if (mysqli_num_rows($result_set)>0) {
-                                      while($problem = mysqli_fetch_assoc($result_set)){
-                                          $stock_list.= "<div class=\"panel panel-default\">";
-                                          $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
-                                          $stock_list.= "<div class=\"panel-body\">";
-                                          $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
-                                          /*$stock_list.= "<td>{$problem['rate']}</td>";*/
-                                          $stock_list.= "<div class=\"clearfix\"></div>
-                                    <!--<hr>
-                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
-                                    Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
-                                    Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.-->
-                                  </div>
-                               </div>";
-                                      }
-                                      $stock_list .= "</tbody>
-                                        </table>";
-                                      echo $stock_list;
-
-                                  } else {
-                                      die("Something happen !!!");
-                                  }
-                              ?>
-                            
-                               <!--<div class="panel panel-default">
+                                 
+                                    <div class="row" style="margin-bottom: 10px;">
+                                      <div class="col-md-12">
+                                        <h4>Your donation plans</h4>
+                                      </div>
+                                    </div> 
+								  
+                               <div class="panel panel-default">
                                  <div class="panel-heading">
                                     <div class="row">
                                       <div class="col-md-6">
@@ -162,6 +122,10 @@ $connection = $db->connect();
                                         <a href="#" class="pull-right">View all</a>
                                       </div>
                                     </div>
+                                  
+                                   
+                                  
+                                  
                                  </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
@@ -173,7 +137,7 @@ $connection = $db->connect();
                                     
                                     
                                   </div>
-                               </div>-->
+                               </div>
 
                             
                           </div>
@@ -230,7 +194,5 @@ $connection = $db->connect();
 	
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/scripts.js"></script>
-
-
 	</body>
 </html>
