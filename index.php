@@ -57,7 +57,7 @@ if (empty($errors)) {
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Faceboot - A Facebook style template for Bootstrap</title>
+		<title>CliMax-Home</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -124,20 +124,20 @@ if (empty($errors)) {
                      
                             <div class="categories col-sm-2" id="sticky">
                              
-                         	<div class="col-xs-12" id="sticky-anchor">
-                         		<img src="images/transport_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
+                         	<div class="col-xs-12" id="sticky-anchor" style="background-image: url(images/transport_logo.jpg)">
+                         		
                          	</div>
-                         	<div class="col-xs-12 ">
-                                <img src="images/technology_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
+                         	<div class="col-xs-12 " style="background-image: url(images/technology_logo.jpg)">
+                                
                          	</div>
-                         	<div class=" col-xs-12 ">
-                                <img src="images/education_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
+                         	        <div class="col-xs-12 " style="background-image: url(images/education_logo.jpg)">
+                                
                          	</div>
-                         	<div class="col-xs-12 ">
-                                <img src="images/social_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
+                         	      <div class="col-xs-12 " style="background-image: url(images/faces.jpg)">
+                                
                          	</div>
-                         	<div class="col-xs-12 ">
-                                <img src="images/other_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
+                         	    <div class="col-xs-12 " style="background-image: url(images/other_logo.jpg)">
+                                
                          	</div>
                          </div> 
 
