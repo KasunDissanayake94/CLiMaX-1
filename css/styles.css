@@ -291,14 +291,15 @@ small.text-muted {
  * --------------------------------------------------
  */
 .categories div.col-xs-12{
-	padding: 10px 10px 10px 20px;
-	height: 100px;
-	margin: 10px 10px 10px 0px;
+	/*padding: 0px 10px 50px 30px;*/
+	height: 110px;
+	margin: 10px 10px 15px 0px;
+	background-color: #AFAFAF;
 }
 
 .categories{
-	
-	background-color: #FFFFFF;
+	height: 600px;
+	background-color: #ADACAD;
 }
 #sticky.stick {
    	width: 202px;
