@@ -55,7 +55,7 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href="userhome.php"><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
+                        <a href="userhome2.php"><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>

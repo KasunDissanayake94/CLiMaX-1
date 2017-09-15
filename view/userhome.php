@@ -127,8 +127,24 @@ $connection = $db->connect();
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right" style="padding-top: 10px">
                                 <div class="row	"> 
-                                 
+                                  <div class="well  col-sm-5"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>Tell us your problem</h4>
+                                     <div class="form-group" style="padding:14px;">
+                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                  </form>
                               </div>
+                              <div class="well col-sm-6 pull-right"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>Tell What us you have</h4>
+                                     <div class="form-group" style="padding:14px;">
+                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                  </form>
+							  </div></div>
 
                 <?php
 
