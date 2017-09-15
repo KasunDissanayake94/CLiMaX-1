@@ -46,7 +46,7 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">Your Problems</a></li>
+                          <li><a href="">My Problems</a></li>
                           <li><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="">Logout</a></li>
@@ -109,7 +109,7 @@
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe your problem"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
@@ -118,7 +118,7 @@
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
                             
