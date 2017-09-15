@@ -32,6 +32,7 @@ $connection = $db->connect();
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/indexstyles.css" rel="stylesheet">
 	</head>
 	<body>
 <div class="wrapper" >
@@ -50,7 +51,7 @@ $connection = $db->connect();
           				<span class="icon-bar"></span>
           				<span class="icon-bar"></span>
                       </button>
-                      <a href="/" class="navbar-brand logo">CLiMaX</a>
+                        <img class="img-circle" id="img_logo" src="img/logo.png">
                   	</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-left">
