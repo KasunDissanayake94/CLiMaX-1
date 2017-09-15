@@ -85,19 +85,19 @@
                             <div class="categories col-sm-2" id="sticky">
                              
                          	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
+                         		<img src="images/transport_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 2</p>
+                                <img src="images/technology_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class=" col-xs-12 ">
-                         		<p>category 3</p>
+                                <img src="images/education_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 4</p>
+                                <img src="images/social_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          	<div class="col-xs-12 ">
-                         		<p>category 5</p>
+                                <img src="images/other_logo.jpg" class="img-circle" style="height: 100px; width: 120px;">
                          	</div>
                          </div> 
 
@@ -180,7 +180,7 @@
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">TryCatch++ ©Copyright 2017</a>
+                            <a href="#" class="pull-right">TryCatch++ ï¿½Copyright 2017</a>
                             </p>
                           </div>
                         </div>
@@ -201,7 +201,7 @@
   <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			Update Status
       </div>
       <div class="modal-body">
