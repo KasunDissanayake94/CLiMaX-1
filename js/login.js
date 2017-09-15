@@ -51,19 +51,15 @@ $(function() {
                 return false;
                 break;
             case "register-form":
-                var $rg_first_name=$('#first_name').val();
-                var $rg_last_name=$('#last_name').val();
-                var $rg_contact_number=$('#contact_number').val();
-                var $rg_address=$('#address').val();
-                var $rg_email=$('#register_email').val();
-                var $rg_password=$('#register_password').val();
-                var $rg_cpassword=$('#register_cpassword').val();
+                var $rg_first_name=$('#name').val();
+                var $rg_email=$('#email').val();
+                var $rg_password=$('#password').val();
+                var $rg_cpassword=$('#cpassword').val();
                 var formArray = [];
-                formArray.push($rg_first_name,$rg_last_name,$rg_contact_number,$rg_address,$rg_email,$rg_password,$rg_cpassword);
-
+                formArray.push($rg_first_name,$rg_email,$rg_password,$rg_cpassword);
                 var jsonString = JSON.stringify(formArray);
                 $.ajax({
-                    url:"controller/register.php", //the page containing php script
+                    url:"../controller/register.php", //the page containing php script
                     type: "POST", //request type
                     data: {data : jsonString},
                     cache: false,
@@ -71,14 +67,14 @@ $(function() {
                     success:function(result){
                         var recievedResult = result[0];
                         if (recievedResult =="failure"){
-                            //alert(result[1]);
-                            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", result[1]);
+                            alert(result[1]);
+                            //msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", result[1]);
                         }
 
                         if (recievedResult =="success"){
-                            // window.location.href = result;
-                            msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", result[1]);
-                            //alert("success");
+                             //window.location.href = result;
+                            //msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", result[1]);
+                            alert("success");
                         }
                     }
                 });

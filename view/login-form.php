@@ -86,18 +86,18 @@
                       <span class="icon-text">Sign Up</span>
                     </h4>
                     <p class="text-muted">Create a new account</p>
-                    <form action="http://demos.bootdey.com/dayday/index.html" method="get">
+                    <form id="register-form">
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Full Name">
+                        <input id="name" type="text" class="form-control" placeholder="Full Name" id>
                       </div>
                       <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email">
+                        <input id="email" type="email" class="form-control" placeholder="Email">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password">
+                        <input id="password" type="password" class="form-control" placeholder="Password">
                       </div>
                       <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Confirm Password">
+                        <input id="cpassword" type="password" class="form-control" placeholder="Confirm Password">
                       </div>
                       <button type="submit" class="btn btn-azure">Register</button>
                     </form>

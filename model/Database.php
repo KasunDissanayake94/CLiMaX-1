@@ -116,6 +116,20 @@
                 return $id;
             }
         }
+        public function getProblems($field,$table){
+            try
+            {
+                $query = "SELECT ".$field." FROM ".$table." ORDER BY ".$field." DESC LIMIT 1";
+                $result_set = $this->executeQuery($query);
+                $number_of_rows = $this->getNumRows($result_set);
+
+                $last_id_row = $result_set->fetch_row();
+                $last_id = $last_id_row[0];
+                return $last_id;
+            } catch(Exception $e){
+                echo $e;
+            }
+        }
 	}
 
  ?>

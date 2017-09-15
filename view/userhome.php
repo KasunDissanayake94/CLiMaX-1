@@ -54,7 +54,7 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <a href=""><i class="glyphicon glyphicon-home"></i> Home</a>
                       </li>
                       <li>
                         <a href="#postModal" role="button" data-toggle="modal"> Post</a>
