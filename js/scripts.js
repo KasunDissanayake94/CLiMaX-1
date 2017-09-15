@@ -12,12 +12,12 @@ $('[data-toggle=offcanvas]').click(function() {
 });
 
 //fixing the position of categories after scroling
-$(window).scroll(function() {
+function myFunction() {
 		
     var window_top = $(window).scrollTop();
 	
     var  div_top= $('#sticky-anchor').offset().top;
-	alert(div_top);
+	
     if (window_top > div_top) {
         $('#sticky').addClass('stick');
         $('#sticky-anchor').height($('#sticky').outerHeight());
@@ -25,5 +25,5 @@ $(window).scroll(function() {
         $('#sticky').removeClass('stick');
         $('#sticky-anchor').height(0);
     }
-});
+}
     

@@ -73,7 +73,7 @@ hr {
 
 .navbar-blue {
     border-width:0;
-	background-color:#3B5999;
+	background-color:#6F0082;
     color:#ffffff;
     font-family:arial,sans-serif;
     top:0;
@@ -89,7 +89,7 @@ hr {
 .navbar-blue .dropdown-menu li > a {padding-left:30px;}
 
 .navbar-blue li>a:hover, .navbar-blue li>a:focus, .navbar-blue .open, .navbar-blue .open>a, .navbar-blue .open>a:hover, .navbar-blue .open>a:focus {
-   background-color:#2A4888;
+   background-color:#4D0066;
    color:#fff;
 }
 
@@ -178,11 +178,11 @@ h1,h2,h3 {
 }
   
 .badge{
-   color:#3B5999;
+   color:#6F0082;
    background-color:#fff;
 }
 .badge:hover, .badge-inverse{
-   background-color:#3B5999;
+   background-color:#6F0082;
    color:#fff;
 }
     
@@ -290,7 +290,7 @@ small.text-muted {
  * our styles
  * --------------------------------------------------
  */
-.categories div{
+.categories div.col-xs-12{
 	padding: 10px 10px 10px 20px;
 	background-color: #C7C7C7;
 	height: 100px;
@@ -306,7 +306,7 @@ small.text-muted {
 #sticky.stick {
     margin-top: 0 !important;
     position: fixed;
-    top: 0;
+    top: 50px;
     z-index: 10000;
     border-radius: 0 0 0.5em 0.5em;
 }
