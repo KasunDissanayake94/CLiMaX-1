@@ -8,48 +8,13 @@ $db = new Database();
 $connection = $db->connect();
 
 
-// check if there are any errors in the form
-if (empty($errors)) {
-
 // prepare database query
-    $query = "SELECT * FROM customer_problem WHERE cust_id=1";
-    $query1 = "SELECT * FROM customer WHERE cust_id=1";
+    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
 
     $result_set = $db->executeQuery($query);
-    $result_set1 = $db->executeQuery($query1);
 
 
     $db->verifyQuery($result_set);
-//check whether result set is having
-    if ($result_set) {
-        if (mysqli_num_rows($result_set) == 1) {
-            // comment found
-            $result = mysqli_fetch_assoc($result_set);
-            $cust_name=$result['cust_name'];
-            $comment = $result['prob_description'];
-
-        } else {
-            die("Something happen !!!");
-        }
-    } else {
-        // query unsuccessful
-        die("Query Unsuccessfull");
-    }
-    if ($result_set1) {
-        if (mysqli_num_rows($result_set1) == 1) {
-            // comment found
-            $result = mysqli_fetch_assoc($result_set1);
-            $cust_name=$result['cust_name'];
-
-
-        } else {
-            die("Something happen !!!");
-        }
-    } else {
-        // query unsuccessful
-        die("Query Unsuccessfull");
-    }
-}
 ?>
 
 
@@ -130,11 +95,37 @@ if (empty($errors)) {
                           
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right" style="padding-top: 10px">
-                               
+                              <?php
+
+                                    $stock_list="";
+                                  if (mysqli_num_rows($result_set)>0) {
+                                      while($problem = mysqli_fetch_assoc($result_set)){
+                                          $stock_list.= "<div class=\"panel panel-default\">";
+                                          $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
+                                          $stock_list.= "<div class=\"panel-body\">";
+                                          $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
+                                          /*$stock_list.= "<td>{$problem['rate']}</td>";*/
+                                          $stock_list.= "<div class=\"clearfix\"></div>
+                                    <!--<hr>
+                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
+                                    Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
+                                    Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.-->
+                                  </div>
+                               </div>";
+                                      }
+                                      $stock_list .= "</tbody>
+                                        </table>";
+                                      echo $stock_list;
+
+                                  } else {
+                                      die("Something happen !!!");
+                                  }
+                              ?>
+
                                <div class="panel panel-default">
                                  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>
                                   <div class="panel-body">
-                                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"><?php echo $cust_name.'<br>'. $comment ?></p>
+                                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"><?php /*echo $cust_name.'<br>'. $comment */?></p>
                                     <div class="clearfix"></div>
                                     <hr>
                                     Design, build, test, and prototype using Bootstrap in real-time from your Web browser. Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap. Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.
