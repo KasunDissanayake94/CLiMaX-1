@@ -54,13 +54,13 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href="view/userhome.php"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                        <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                       </li>
                       <li>
                         <a href="#postModal" role="button" data-toggle="modal"> Post</a>
                       </li>
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Sign In</span></a>
+                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
@@ -72,10 +72,10 @@
                 
                     <div class="full col-sm-9" style="padding: 50px;">
                       <div class="col-md-6">
-                       <img src="img/bg.png" >
+                       <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
-                       <img src="img/bg.png" >
+                       <img src="../img/bg.png" >
                     	  </div>
                      	 <!-- content -->                      
                       	<div class="row">
@@ -107,7 +107,15 @@
                           
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right" style="padding-top: 10px">
-                               
+                                 <div class="well"> 
+                                   <form class="form-horizontal" role="form">
+                                    <h4>What's New</h4>
+                                     <div class="form-group" style="padding:14px;">
+                                      <textarea class="form-control" placeholder="Update your status"></textarea>
+                                    </div>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+                                  </form>
+                              </div>
                                <div class="panel panel-default">
                                  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>
                                   <div class="panel-body">
@@ -167,13 +175,7 @@
                             
                           </div>
                        </div><!--/row-->
-                      
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
-                          </div>
-                        </div>
-                      
+              
                         <div class="row" id="footer">    
                           <div class="col-sm-6">
                             
