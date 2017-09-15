@@ -1,28 +1,3 @@
-<script>
-    $(document).ready(function (){
-        $(document).on('click','.post-photo',function(){
-            //var service_id = $(this).attr("id");
-           /* $.ajax({
-                url:"../controller/fetch-service-handler.php",
-                method: "post",
-                data: {service_id:service_id},
-                dataType: "json",
-                cache: false,
-                success:function (data) {
-                    $('#update_service_name').val(data.service_name);
-                    $('#update_service_charge').val(data.service_charge);
-                    $('#update_service_description').val(data.description);
-                    $('#update_service_duration').val(data.duration);
-                    $('#update_commission').val(data.commission_percentage);
-                    $('#update_service_id').val(data.service_id);
-                    jQuery.noConflict();
-                    $('#add_data_Modal').modal('show');
-                }
-            });
-        });*/
-    });
-</script>
-
 <!DOCTYPE html>
 
 <?php
@@ -48,21 +23,11 @@ $connection = $db->connect();
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>CliMax-Home</title>
-        <style>
-            img{
-                max-width:180px;
-            }
-            input[type=file]{
-                padding:10px;
-                background:#2d2d2d;}
-        </style>
-        <link href="css/popup.css" rel="stylesheet">
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="../js/popup.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -85,7 +50,7 @@ $connection = $db->connect();
           				<span class="icon-bar"></span>
           				<span class="icon-bar"></span>
                       </button>
-                        <img id="img_logo" src="../images/CLiMaX%20logo.png">
+                      <a href="/" class="navbar-brand logo">CLiMaX</a>
                   	</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-left">
@@ -100,7 +65,7 @@ $connection = $db->connect();
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">My Problems</a></li>
+                          <li><a href="">Your Problems</a></li>
                           <li><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="">Logout</a></li>
@@ -124,7 +89,7 @@ $connection = $db->connect();
                 <div class="padding">
                 
                     <div class="full col-sm-9" style="padding: 50px;">
-                      <div class="col-md-6" style="">
+                      <div class="col-md-6">
                        <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
@@ -135,45 +100,44 @@ $connection = $db->connect();
                           <!-- Categories -->
 
 
-                           <!-- <div class="categories col-sm-2" id="sticky">
+                            <div class="categories col-sm-2" id="sticky">
 
-                                    <div class="col-xs-12" id="sticky-anchor">
-                                        <img src="../images/transport_logo.jpg" class="category-items">
-                                    </div>
-                                    <div class="col-xs-12 ">
-                                        <img src="../images/technology_logo.jpg" class="category-items">
-                                    </div>
-                                    <div class=" col-xs-12 ">
-                                        <img src="../images/education_logo.jpg" class="category-items">
-                                    </div>
-                                    <div class="col-xs-12 ">
-                                        <img src="../images/social_logo.jpg" class="category-items">
-                                    </div>
-                                    <div class="col-xs-12 ">
-                                        <img src="../images/other_logo.jpg" class="category-items">
-                                    </div>
-                         </div>-->
-                          
+                                <div class="col-xs-12" id="sticky-anchor">
+                                    <img src="../images/transport_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/technology_logo.jpg" class="category-items">
+                                </div>
+                                <div class=" col-xs-12 ">
+                                    <img src="../images/education_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/social_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/other_logo.jpg" class="category-items">
+                                </div>>
+                         </div> 
 
                           <!-- main col right -->
-                         <!-- <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
                                 <div class="row	"> 
                                   <div class="well  col-sm-5"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
+                                      <textarea class="form-control" placeholder="Describe your problem"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile"></textarea>
+                                      <textarea class="form-control" placeholder="Describe what you got"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
 
@@ -199,9 +163,10 @@ $connection = $db->connect();
                                       }
                                       $stock_list .= "</tbody>
                                         </table>";
+                                        //insertComments.php?id=$problemid
                                       echo $stock_list;
                                       //echo "<hr>
-                                    echo "<form method='POST' action='userhome.php' accept-charset='UTF-8'>
+                                    echo "<form method='POST' action='insertComments.php?id=$problemid' accept-charset='UTF-8'>
                                     <div class='input-group'>
                                       <div class='input-group-btn'>
                                       <button class='btn btn-default'>+1</button><button class='btn btn-default'><i class='glyphicon glyphicon-share'></i></button>
@@ -209,7 +174,7 @@ $connection = $db->connect();
                                       <input type='text' class='form-control' placeholder='Add a comment..' name='commentValue'>
                                       <span class='input-group-btn'>
 
-                                       <button name = 'commentBtn' class='btn btn-default' type='button'>Comment</button>
+                                       <button name = 'commentBtn' class='btn btn-default' type='submit'>Comment</button>
                                       </span>
                                     </div>
                                     </form><hr>";
@@ -311,7 +276,7 @@ $connection = $db->connect();
                                 </div>
                               </div>-->
                             
-                          </div>-->
+                          </div>
                        </div><!--/row-->
               
                         <div class="row" id="footer">    
@@ -336,7 +301,6 @@ $connection = $db->connect();
 </div>
 
 
-
 <!--post modal-->
 <div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog">
@@ -355,7 +319,7 @@ $connection = $db->connect();
       <div class="modal-footer">
           <div>
           <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
-            <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href="" onClick="return popup(this, 'notes')"><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+            <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
 		  </div>	
       </div>
   </div>
@@ -396,35 +360,27 @@ $connection = $db->connect();
 ?>
 
 <?php 
-    if(isset($_POST['commentBtn']))
+    /*if(isset($_POST['commentBtn']))
     {
       $comment = $_POST['commentValue'];
       $date = date("Y-m-d");
       //$time = date("h:i:sa");
-        
-      $query = "SELECT com_id FROM comment_rev";
+      $probID = $_GET['id'];  
+      $query = "SELECT com_id FROM comment_2";
       $query_run = mysqli_query($db,$query);
-      
+      $user = 1;
       $oldno = mysqli_num_rows($query_run);
       $newno = $oldno + 1;
       //$prefix = "REV";
       //$newid = $prefix.$newno;
       
-      $sql5="INSERT INTO comment_2 VALUES('$newno','$paddyID','$un','$date','$time','$comment','$rating')";
+      $sql5="INSERT INTO comment_2 VALUES('$newno','$probID','$comment',$date,'$user')";
 
-      $res5=mysqli_query($con,$sql5);
-    }
+      $res5=mysqli_query($db,$sql5);
+    }*/
   ?>
 	
 		<script src="../js/bootstrap.min.js"></script>
 		<script src="../js/scripts.js"></script>
 	</body>
-<script>
-    document.getElementById("selectedFile").onchange = function () {
-    document.getElementById("uploadFile").value = this.value;
-};
-document.getElementById("selectedFile1").onchange = function () {
-    document.getElementById("uploadFile").value = this.value;
-};
-</script>
 </html>
