@@ -44,9 +44,10 @@
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">Dashbord</a></li>
+                          <li><a href="">Your Problems</a></li>
+                          <li><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="">Logout</a></li>
                         </ul>
@@ -54,11 +55,9 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href=""><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
-                      <li>
-                        <a href="#postModal" role="button" data-toggle="modal"> Post</a>
-                      </li>
+  
                       <li>
                         <a href="view/login-form.php"><span class="badge">Log out</span></a>
                       </li>
@@ -115,7 +114,7 @@
                               </div>
                               <div class="well col-sm-6 pull-right"> 
                                    <form class="form-horizontal" role="form">
-                                    <h4>Tell us you have</h4>
+                                    <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got"></textarea>
                                     </div>
