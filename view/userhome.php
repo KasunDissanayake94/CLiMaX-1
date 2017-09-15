@@ -6,13 +6,13 @@
 		<title>Faceboot - A Facebook style template for Bootstrap</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <div class="wrapper" >
@@ -168,13 +168,19 @@
                           </div>
                        </div><!--/row-->
                       
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <a href="#">Twitter</a> <small class="text-muted">|</small> <a href="#">Facebook</a> <small class="text-muted">|</small> <a href="#">Google+</a>
+                          </div>
+                        </div>
+                      
                         <div class="row" id="footer">    
                           <div class="col-sm-6">
                             
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">TryCatch++ ©Copyright 2017</a>
+                            <a href="#" class="pull-right">TryCatch++ �Copyright 2017</a>
                             </p>
                           </div>
                         </div>
@@ -195,7 +201,7 @@
   <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
 			Update Status
       </div>
       <div class="modal-body">
@@ -217,7 +223,7 @@
 	<!-- script references -->
 	
 	
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/scripts.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/scripts.js"></script>
 	</body>
 </html>
