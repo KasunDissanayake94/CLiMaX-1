@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 09:19 PM
+-- Generation Time: Sep 15, 2017 at 09:30 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -190,7 +190,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `last_login`, `is_deleted`, `type`, `first_time`) VALUES
-(18, 'Wasura', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-16 02:47:16', 0, 'Customer', 0),
+(2, 'Hisan Hunais', 'hisan.live@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-16 03:00:21', 0, 'Customer', 0),
+(18, 'Wasura', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-16 02:58:41', 0, 'Customer', 0),
 (26, 'Dulmina', 'dula@gmail.com', '900150983cd24fb0d6963f7d28e17f72', NULL, 0, 'Customer', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
