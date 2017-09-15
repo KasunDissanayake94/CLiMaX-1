@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Faceboot - A Facebook style template for Bootstrap</title>
+		<title>CliMax-Home</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -44,9 +44,10 @@
                     </form>
                     <ul class="nav navbar-nav navbar-right">
                       <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-circle" aria-hidden="true"></i></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">Dashbord</a></li>
+                          <li><a href="">Your Problems</a></li>
+                          <li><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="">Logout</a></li>
                         </ul>
@@ -54,11 +55,9 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href=""><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
-                      <li>
-                        <a href="#postModal" role="button" data-toggle="modal"> Post</a>
-                      </li>
+  
                       <li>
                         <a href="view/login-form.php"><span class="badge">Log out</span></a>
                       </li>
@@ -80,30 +79,31 @@
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
-                         
-                     
+
+
                             <div class="categories col-sm-2" id="sticky">
-                             
-                         	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 2</p>
-                         	</div>
-                         	<div class=" col-xs-12 ">
-                         		<p>category 3</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 4</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 5</p>
-                         	</div>
+
+                                <div class="col-xs-12" id="sticky-anchor">
+                                    <img src="../images/transport_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/technology_logo.jpg" class="category-items">
+                                </div>
+                                <div class=" col-xs-12 ">
+                                    <img src="../images/education_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/social_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/other_logo.jpg" class="category-items">
+                                </div>>
                          </div> 
 
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right" style="padding-top: 10px">
-                                 <div class="well  col-sm-6"> 
+                                <div class="row	"> 
+                                  <div class="well  col-sm-5"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
@@ -112,27 +112,34 @@
                                     <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
-                              <div class="well col-sm-6"> 
+                              <div class="well col-sm-6 pull-right"> 
                                    <form class="form-horizontal" role="form">
-                                    <h4>Tell us your problem</h4>
+                                    <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got"></textarea>
                                     </div>
                                     <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
-                              </div>
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>
-                                  <div class="panel-body">
-                                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">The Bootstrap Playground</a></p>
-                                    <div class="clearfix"></div>
-                                    <hr>
-                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap. Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.
-                                  </div>
-                               </div>
+							  </div></div>
                             
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
+                                 <div class="panel-heading">
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <h4>Stackoverflow</h4>
+                                      </div>
+                                      <div class="col-md-5">
+                                        <i class="fa fa-star-o pull-right" aria-hidden="true"></i>
+                                      </div>
+                                      <div class="col-md-1">
+                                        <a href="#" class="pull-right">View all</a>
+                                      </div>
+                                    </div>
+                                  
+                                   
+                                  
+                                  
+                                 </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
                                     <div class="clearfix"></div>
@@ -147,6 +154,7 @@
                                       <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
                                       </div>
                                       <input type="text" class="form-control" placeholder="Add a comment..">
+                                      <span class="input-group-addon" id="basic-addon2">Submit</span>
                                     </div>
                                     </form>
                                     
