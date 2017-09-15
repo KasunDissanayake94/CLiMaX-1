@@ -291,7 +291,7 @@ small.text-muted {
  * --------------------------------------------------
  */
 .categories div.col-xs-12{
-	/*padding: 0px 10px 50px 30px;*/
+	padding: 0px 10px 50px 30px;
 	height: 110px;
 	margin: 10px 10px 15px 0px;
 	background-color: #AFAFAF;
