@@ -81,20 +81,20 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="myProblems.php">My Problems</a></li>
-                          <li><a href="mydonations.php">Donation Plans</a></li>
+                          <li><a href="">My Problems</a></li>
+                          <li><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
-                          <li><a href="../index.php">Logout</a></li>
+                          <li><a href="">Logout</a></li>
                         </ul>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li style="background-color:#4D0066;">
-                        <a href=""><i class="fa fa-home" style="font-size: 16px; " aria-hidden="true"></i> Home</a>
+                      <li>
+                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>
-                        <a href="../index.php"><span class="badge">Log out</span></a>
+                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
@@ -144,16 +144,16 @@
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got"></textarea>
+                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
                             
@@ -277,6 +277,9 @@
 <script>
     document.getElementById("selectedFile").onchange = function () {
     document.getElementById("uploadFile").value = this.value;
+};
+document.getElementById("selectedFile1").onchange = function () {
+    document.getElementById("uploadFile1").value = this.value;
 };
 </script>
 </html>
