@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 07:06 AM
+-- Generation Time: Sep 15, 2017 at 01:52 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -75,11 +75,11 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `cust_id` int(255) NOT NULL AUTO_INCREMENT,
   `cust_name` varchar(60) NOT NULL,
   `cust_email` varchar(75) NOT NULL,
-  `cust_phone` int(12) NOT NULL,
-  `cust_address` varchar(100) NOT NULL,
-  `cust_gender` varchar(10) NOT NULL,
+  `cust_phone` int(12) DEFAULT NULL,
+  `cust_address` varchar(100) DEFAULT NULL,
+  `cust_gender` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`cust_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customer`
@@ -87,7 +87,8 @@ CREATE TABLE IF NOT EXISTS `customer` (
 
 INSERT INTO `customer` (`cust_id`, `cust_name`, `cust_email`, `cust_phone`, `cust_address`, `cust_gender`) VALUES
 (1, 'Kasun Dissanayake', 'kasunprageethdissanayake@gmail.com', 711625552, 'Panadura', 'Male'),
-(2, 'Hisan Hunais', 'hisan.live@gmail.com', 762345443, 'Dehiwala', 'Male');
+(2, 'Hisan Hunais', 'hisan.live@gmail.com', 762345443, 'Dehiwala', 'Male'),
+(4, 'Dulmina', 'dula@gmail.com', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -163,8 +164,7 @@ INSERT INTO `problem_comment` (`prob_id`, `com_id`) VALUES
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(40) NOT NULL,
   `last_login` datetime DEFAULT NULL,
@@ -172,14 +172,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `type` varchar(15) NOT NULL,
   `first_time` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `password`, `last_login`, `is_deleted`, `type`, `first_time`) VALUES
-(18, 'Wasura', 'Wattearachchi', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-09 20:04:30', 0, 'Customer', 0);
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `last_login`, `is_deleted`, `type`, `first_time`) VALUES
+(18, 'Wasura', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-15 19:14:56', 0, 'Customer', 0),
+(25, 'Dulmina', 'dula@gmail.com', '900150983cd24fb0d6963f7d28e17f72', NULL, 0, 'Customer', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
