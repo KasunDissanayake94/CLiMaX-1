@@ -116,7 +116,7 @@ $connection = $db->connect();
                                 </div>
                                 <div class="col-xs-12 ">
                                     <img src="../images/other_logo.jpg" class="category-items">
-                                </div>>
+                                </div>
                          </div> 
 
                           <!-- main col right -->

@@ -1,27 +1,3 @@
-<script>
-    $(document).ready(function (){
-        $(document).on('click','.post-photo',function(){
-            //var service_id = $(this).attr("id");
-           /* $.ajax({
-                url:"../controller/fetch-service-handler.php",
-                method: "post",
-                data: {service_id:service_id},
-                dataType: "json",
-                cache: false,
-                success:function (data) {
-                    $('#update_service_name').val(data.service_name);
-                    $('#update_service_charge').val(data.service_charge);
-                    $('#update_service_description').val(data.description);
-                    $('#update_service_duration').val(data.duration);
-                    $('#update_commission').val(data.commission_percentage);
-                    $('#update_service_id').val(data.service_id);
-                    jQuery.noConflict();
-                    $('#add_data_Modal').modal('show');
-                }
-            });
-        });*/
-    });
-</script>
 
 <!DOCTYPE html>
 
@@ -48,21 +24,14 @@ $connection = $db->connect();
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>CliMax-Home</title>
-        <style>
-            img{
-                max-width:180px;
-            }
-            input[type=file]{
-                padding:10px;
-                background:#2d2d2d;}
-        </style>
-        <link href="css/popup.css" rel="stylesheet">
+       
+       
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="../js/popup.js"></script>
+        <script src="../js/scripts.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -135,7 +104,7 @@ $connection = $db->connect();
                           <!-- Categories -->
 
 
-                           <!-- <div class="categories col-sm-2" id="sticky">
+                           <div class="categories col-sm-2" id="sticky">
 
                                     <div class="col-xs-12" id="sticky-anchor">
                                         <img src="../images/transport_logo.jpg" class="category-items">
@@ -152,30 +121,14 @@ $connection = $db->connect();
                                     <div class="col-xs-12 ">
                                         <img src="../images/other_logo.jpg" class="category-items">
                                     </div>
-                         </div>-->
+                         </div>
                           
 
                           <!-- main col right -->
-                         <!-- <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
                                 <div class="row	"> 
-                                  <div class="well  col-sm-5"> 
-                                   <form class="form-horizontal" role="form">
-                                    <h4>Tell us your problem</h4>
-                                     <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
-                                    </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
-                                  </form>
+                                 
                               </div>
-                              <div class="well col-sm-6 pull-right"> 
-                                   <form class="form-horizontal" role="form">
-                                    <h4>Tell What us you have</h4>
-                                     <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile"></textarea>
-                                    </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
-                                  </form>
-							  </div></div>
 
                 <?php
 
@@ -247,7 +200,7 @@ $connection = $db->connect();
 
 
                             
-                               <!--<div class="panel panel-default">
+                               <div class="panel panel-default">
                                  <div class="panel-heading">
                                     <div class="row">
                                       <div class="col-md-6">
@@ -309,9 +262,9 @@ $connection = $db->connect();
                                     <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
                                   </p>
                                 </div>
-                              </div>-->
+                              </div>
                             
-                          </div>-->
+                          </div>
                        </div><!--/row-->
               
                         <div class="row" id="footer">    
@@ -417,7 +370,7 @@ $connection = $db->connect();
   ?>
 	
 		<script src="../js/bootstrap.min.js"></script>
-		<script src="../js/scripts.js"></script>
+		
 	</body>
 <script>
     document.getElementById("selectedFile").onchange = function () {
