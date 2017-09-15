@@ -124,7 +124,7 @@ $connection = $db->connect();
                 <div class="padding">
                 
                     <div class="full col-sm-9" style="padding: 50px;">
-                      <div class="col-md-6">
+                      <div class="col-md-6" style="">
                        <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
@@ -135,7 +135,7 @@ $connection = $db->connect();
                           <!-- Categories -->
 
 
-                            <div class="categories col-sm-2" id="sticky">
+                           <!-- <div class="categories col-sm-2" id="sticky">
 
                                     <div class="col-xs-12" id="sticky-anchor">
                                         <img src="../images/transport_logo.jpg" class="category-items">
@@ -151,11 +151,12 @@ $connection = $db->connect();
                                     </div>
                                     <div class="col-xs-12 ">
                                         <img src="../images/other_logo.jpg" class="category-items">
-                                    </div>>
-                         </div>
+                                    </div>
+                         </div>-->
+                          
 
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                         <!-- <div class="col-sm-10 pull-right" style="padding-top: 10px">
                                 <div class="row	"> 
                                   <div class="well  col-sm-5"> 
                                    <form class="form-horizontal" role="form">
@@ -170,9 +171,9 @@ $connection = $db->connect();
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell What us you have</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
+                                      <textarea class="form-control" placeholder="Describe what you got" id="uploadFile"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
 
@@ -310,7 +311,7 @@ $connection = $db->connect();
                                 </div>
                               </div>-->
                             
-                          </div>
+                          </div>-->
                        </div><!--/row-->
               
                         <div class="row" id="footer">    
@@ -423,7 +424,7 @@ $connection = $db->connect();
     document.getElementById("uploadFile").value = this.value;
 };
 document.getElementById("selectedFile1").onchange = function () {
-    document.getElementById("uploadFile1").value = this.value;
+    document.getElementById("uploadFile").value = this.value;
 };
 </script>
 </html>
