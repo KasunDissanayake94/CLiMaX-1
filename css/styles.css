@@ -294,17 +294,17 @@ small.text-muted {
 	padding: 10px 10px 10px 20px;
 	background-color: #C7C7C7;
 	height: 100px;
-	margin: 10px;
+	margin: 10px 10px 10px 0px;
 }
 .categories div.col-xs-12:hover{
 	background-color: #9B9B9B;
 }
 .categories{
 	
-	background-color: #f2f2f2;
+	background-color: #FFFFFF;
 }
 #sticky.stick {
-   
+   	width: 202px;
     position: fixed;
    	top :50px;
   
