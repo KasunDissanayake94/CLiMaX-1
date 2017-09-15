@@ -79,13 +79,13 @@
                     	  </div>
                      	 <!-- content -->                      
                       	<div class="row">
-                          <!-- Categories -->
+                          <!-- Categories --> 
                          
                      
                             <div class="categories col-sm-2" id="sticky">
-                             
-                         	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
+                             <div id="sticky-anchor"></div>
+                         	<div class="col-xs-12">
+                         		<p><img src="" class="rounded-circle"></p>
                          	</div>
                          	<div class="col-xs-12 ">
                          		<p>category 2</p>
@@ -106,7 +106,7 @@
                          
                           
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                          <div class="col-sm-10 " style="padding-top: 10px">
                                
                                <div class="panel panel-default">
                                  <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>

@@ -14,16 +14,16 @@ $('[data-toggle=offcanvas]').click(function() {
 //fixing the position of categories after scroling
 function myFunction() {
 		
-    var window_top = $(window).scrollTop();
+    var window_top = $('.column').scrollTop();
 	
     var  div_top= $('#sticky-anchor').offset().top;
 	
-    if (window_top > div_top) {
+    if (window_top-200 > div_top) {
         $('#sticky').addClass('stick');
-        $('#sticky-anchor').height($('#sticky').outerHeight());
+       // $('#sticky-anchor').height($('#sticky').outerHeight());
     } else {
         $('#sticky').removeClass('stick');
-        $('#sticky-anchor').height(0);
+       // $('#sticky-anchor').height(0);
     }
 }
     

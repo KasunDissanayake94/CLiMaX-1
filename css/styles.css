@@ -296,7 +296,7 @@ small.text-muted {
 	height: 100px;
 	margin: 10px;
 }
-.categories div:hover{
+.categories div.col-xs-12:hover{
 	background-color: #9B9B9B;
 }
 .categories{
@@ -304,9 +304,8 @@ small.text-muted {
 	background-color: #f2f2f2;
 }
 #sticky.stick {
-    margin-top: 0 !important;
+   
     position: fixed;
-    top: 50px;
-    z-index: 10000;
-    border-radius: 0 0 0.5em 0.5em;
+   	top :50px;
+  
 }
