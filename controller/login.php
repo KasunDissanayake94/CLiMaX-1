@@ -67,7 +67,7 @@
           }
           
           else {
-          	echo 'userhome.php';
+          	echo 'userhome2.php';
           }
 
        }
