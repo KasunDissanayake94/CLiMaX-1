@@ -79,25 +79,25 @@
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
-                         
-                     
+
+
                             <div class="categories col-sm-2" id="sticky">
-                             
-                         	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 2</p>
-                         	</div>
-                         	<div class=" col-xs-12 ">
-                         		<p>category 3</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 4</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 5</p>
-                         	</div>
+
+                                <div class="col-xs-12" id="sticky-anchor">
+                                    <img src="../images/transport_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/technology_logo.jpg" class="category-items">
+                                </div>
+                                <div class=" col-xs-12 ">
+                                    <img src="../images/education_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/social_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/other_logo.jpg" class="category-items">
+                                </div>>
                          </div> 
 
                           <!-- main col right -->
@@ -123,7 +123,11 @@
 							  </div></div>
                             
                                <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
+                                 <div class="panel-heading">
+                                  <a href="#" class="pull-right">View all</a> <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true"></span>
+                                  <h4>Stackoverflow</h4>
+                                  
+                                 </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
                                     <div class="clearfix"></div>
