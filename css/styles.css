@@ -291,19 +291,32 @@ small.text-muted {
  * --------------------------------------------------
  */
 .categories div.col-xs-12{
-	padding: 10px 10px 10px 20px;
-	height: 100px;
-	margin: 10px 10px 10px 0px;
+	padding: 0px 10px 0px 20px;
+	height: 120px;
+	margin: 5px 10px 5px 0px;
 }
 
 .categories{
-	
+	height: 800px;
 	background-color: #FFFFFF;
 }
+
+.category-items{
+    border-radius: 12px;
+    width: 140px;
+    height: 100px;
+}
+
+img.category-items:hover{
+    background-color: #fefff6;
+}
+
 #sticky.stick {
    	width: 202px;
     position: fixed;
    	top :50px;
   
 }
+
+
 

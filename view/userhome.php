@@ -80,25 +80,25 @@
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
-                         
-                     
+
+
                             <div class="categories col-sm-2" id="sticky">
-                             
-                         	<div class="col-xs-12" id="sticky-anchor">
-                         		<p></p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 2</p>
-                         	</div>
-                         	<div class=" col-xs-12 ">
-                         		<p>category 3</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 4</p>
-                         	</div>
-                         	<div class="col-xs-12 ">
-                         		<p>category 5</p>
-                         	</div>
+
+                                <div class="col-xs-12" id="sticky-anchor">
+                                    <img src="../images/transport_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/technology_logo.jpg" class="category-items">
+                                </div>
+                                <div class=" col-xs-12 ">
+                                    <img src="../images/education_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/social_logo.jpg" class="category-items">
+                                </div>
+                                <div class="col-xs-12 ">
+                                    <img src="../images/other_logo.jpg" class="category-items">
+                                </div>>
                          </div> 
 
                            		

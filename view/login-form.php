@@ -43,7 +43,7 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="profile.html">CLiMaX</a>
+          <a class="navbar-brand" href="profile.html" id="#login_logo">CLiMaX</a>
         </div>
       </div>
     </nav>
@@ -110,9 +110,6 @@
 
       <footer class="footer">
 
-        <div class="container">
-          <p class="text-muted"> CLiMaX </p>
-        </div>
       </footer>
       <script type="text/javascript">
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
