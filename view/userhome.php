@@ -125,8 +125,20 @@
                             
                                <div class="panel panel-default">
                                  <div class="panel-heading">
-                                  <a href="#" class="pull-right">View all</a> <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true"></span>
-                                  <h4>Stackoverflow</h4>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <h4>Stackoverflow</h4>
+                                      </div>
+                                      <div class="col-md-5">
+                                        <i class="fa fa-star-o pull-right" aria-hidden="true"></i>
+                                      </div>
+                                      <div class="col-md-1">
+                                        <a href="#" class="pull-right">View all</a>
+                                      </div>
+                                    </div>
+                                  
+                                   
+                                  
                                   
                                  </div>
                                   <div class="panel-body">
@@ -143,6 +155,7 @@
                                       <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
                                       </div>
                                       <input type="text" class="form-control" placeholder="Add a comment..">
+                                      <span class="input-group-addon" id="basic-addon2">Submit</span>
                                     </div>
                                     </form>
                                     
