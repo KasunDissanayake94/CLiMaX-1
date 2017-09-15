@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>CliMax-problems</title>
+		<title>CliMax-Mydonations</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -46,8 +46,8 @@
                       <li class="dropdown" style="background-color:#4D0066;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li style="background-color:#DCC6FF;"><a href="">Your Problems</a></li>
-                          <li><a href="mydonations.php">Donation Plans</a></li>
+                          <li ><a href="myProblems.php">Your Problems</a></li>
+                          <li style="background-color:#DCC6FF;"><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="../index.php">Logout</a></li>
                         </ul>
@@ -102,12 +102,13 @@
 
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right">
-                                <div class="row" style="margin-bottom: 10px;">
+                                 
+                                    <div class="row" style="margin-bottom: 10px;">
                                       <div class="col-md-12">
-                                        <h4>My Problems</h4>
+                                        <h4>Your donation plans</h4>
                                       </div>
                                     </div> 
-                            
+								  
                                <div class="panel panel-default">
                                  <div class="panel-heading">
                                     <div class="row">
@@ -121,6 +122,10 @@
                                         <a href="#" class="pull-right">View all</a>
                                       </div>
                                     </div>
+                                  
+                                   
+                                  
+                                  
                                  </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>

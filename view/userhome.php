@@ -56,20 +56,20 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">My Problems</a></li>
-                          <li><a href="">Donation Plans</a></li>
+                          <li><a href="myProblems.php">My Problems</a></li>
+                          <li><a href="mydonations.php">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
-                          <li><a href="">Logout</a></li>
+                          <li><a href="../index.php">Logout</a></li>
                         </ul>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li>
-                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
+                      <li style="background-color:#4D0066;">
+                        <a href=""><i class="fa fa-home" style="font-size: 16px; " aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
+                        <a href="../index.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
