@@ -49,8 +49,7 @@
           // valid user found
           $user = mysqli_fetch_assoc($result_set);
           $_SESSION['user_id'] = $user['id'];
-          $_SESSION['first_name'] = $user['first_name'];
-          $_SESSION['last_name'] = $user['last_name'];
+          $_SESSION['name'] = $user['name'];
           $_SESSION['type'] = $user['type'];
           $_SESSION['email'] = $user['email'];
 
