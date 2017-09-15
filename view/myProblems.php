@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>CliMax-Home</title>
+		<title>CliMax-problems</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -43,23 +43,23 @@
                         </div>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
+                      <li class="dropdown" style="background-color:#4D0066;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">Your Problems</a></li>
-                          <li><a href="">Donation Plans</a></li>
+                          <li style="background-color:#DCC6FF;"><a href="">Your Problems</a></li>
+                          <li><a href="mydonations.php">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
-                          <li><a href="">Logout</a></li>
+                          <li><a href="../index.php">Logout</a></li>
                         </ul>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                       <li>
-                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
+                        <a href="userhome.php"><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
+                        <a href="../index.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
@@ -102,7 +102,11 @@
 
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right">
-                                
+                                <div class="row" style="margin-bottom: 10px;">
+                                      <div class="col-md-12">
+                                        <h4>My Problems</h4>
+                                      </div>
+                                    </div> 
                             
                                <div class="panel panel-default">
                                  <div class="panel-heading">
@@ -117,9 +121,7 @@
                                         <a href="#" class="pull-right">View all</a>
                                       </div>
                                     </div>
-                                  
-                                   
-                                  
+                
                                   
                                  </div>
                                   <div class="panel-body">

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>CliMax-Home</title>
+		<title>CliMax-Mydonations</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -43,19 +43,19 @@
                         </div>
                     </form>
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="dropdown">
+                      <li class="dropdown" style="background-color:#4D0066;">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="myProblems.php">My Problems</a></li>
-                          <li><a href="mydonations.php">Donation Plans</a></li>
+                          <li ><a href="myProblems.php">Your Problems</a></li>
+                          <li style="background-color:#DCC6FF;"><a href="">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
                           <li><a href="../index.php">Logout</a></li>
                         </ul>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li style="background-color:#4D0066;">
-                        <a href=""><i class="fa fa-home" style="font-size: 16px; " aria-hidden="true"></i> Home</a>
+                      <li>
+                        <a href="userhome.php"><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>
@@ -70,12 +70,12 @@
                 <div class="padding">
                 
                     <div class="full col-sm-9" style="padding: 50px;">
-                      <div class="col-md-6">
+                      <!--<div class="col-md-6">
                        <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
                        <img src="../img/bg.png" >
-                    	  </div>
+                    	  </div>-->
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
@@ -97,31 +97,18 @@
                                 </div>
                                 <div class="col-xs-12 ">
                                     <img src="../images/other_logo.jpg" class="category-items">
-                                </div>>
+                                </div>
                          </div> 
 
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
-                                <div class="row	"> 
-                                  <div class="well  col-sm-5"> 
-                                   <form class="form-horizontal" role="form">
-                                    <h4>Tell us your problem</h4>
-                                     <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem"></textarea>
-                                    </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
-                                  </form>
-                              </div>
-                              <div class="well col-sm-6 pull-right"> 
-                                   <form class="form-horizontal" role="form">
-                                    <h4>Tell What us you have</h4>
-                                     <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe what you got"></textarea>
-                                    </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
-                                  </form>
-							  </div></div>
-                            
+                          <div class="col-sm-10 pull-right">
+                                 
+                                    <div class="row" style="margin-bottom: 10px;">
+                                      <div class="col-md-12">
+                                        <h4>Your donation plans</h4>
+                                      </div>
+                                    </div> 
+								  
                                <div class="panel panel-default">
                                  <div class="panel-heading">
                                     <div class="row">
@@ -147,44 +134,11 @@
                                     
                                     <p>If you're looking for help with Bootstrap code, the <code>twitter-bootstrap</code> tag at <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a> is a good place to find answers.</p>
                                     
-                                    <hr>
-                                    <form>
-                                    <div class="input-group">
-                                      <div class="input-group-btn">
-                                      <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
-                                      </div>
-                                      <input type="text" class="form-control" placeholder="Add a comment..">
-                                      <span class="input-group-addon" id="basic-addon2">Submit</span>
-                                    </div>
-                                    </form>
+                                    
                                     
                                   </div>
                                </div>
 
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
-                                  <div class="panel-body">
-                                    <ul class="list-group">
-                                    <li class="list-group-item">Modals</li>
-                                    <li class="list-group-item">Sliders / Carousel</li>
-                                    <li class="list-group-item">Thumbnails</li>
-                                    </ul>
-                                  </div>
-                               </div>
-                            
-                               <div class="panel panel-default">
-                                <div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div>
-                                <div class="panel-body">
-                                  <p class="lead">Social Good</p>
-                                  <p>1,200 Followers, 83 Posts</p>
-                                  
-                                  <p>
-                                    <img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                  </p>
-                                </div>
-                              </div>
                             
                           </div>
                        </div><!--/row-->

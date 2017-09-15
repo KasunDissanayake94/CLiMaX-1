@@ -168,7 +168,7 @@ h1,h2,h3 {
 .badge{
    color:#6F0082;
    background-color:#fff;
-    font-size: medium;
+    font-size:small;
 }
 .badge:hover, .badge-inverse{
    background-color:#6F0082;
