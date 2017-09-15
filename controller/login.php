@@ -63,12 +63,10 @@
           // redirect to userhome.php
           $type = $user["type"];
           if ($type == "Administrator"){
-           	echo 'view/admin-home.php';
+           	echo 'admin-home.php';
           }
-          elseif ($type == "Receptionist") {
-          	echo 'view/receptionist-home.php';
-          }
-          elseif ($type == "Customer") {
+          
+          else {
           	echo 'userhome.php';
           }
 
