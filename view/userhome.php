@@ -88,7 +88,7 @@ if(!isset($_SESSION['id']) || ($_SESSION['type']!="Customer")){
                     </form>
                     <ul class="nav navbar-nav">
                       <li>
-                        <a href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+                        <a href=""><i class="glyphicon glyphicon-home"></i> Home</a>
                       </li>
                       <li>
                         <a href="#postModal" role="button" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i> Post</a>
