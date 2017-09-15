@@ -61,7 +61,7 @@
                       <h4 class="m-b-0"><span class="icon-text">Login</span></h4>
                       <p class="text-muted">Access your account</p>
                     </div>
-                    <form action="http://demos.bootdey.com/dayday/index.html" method="get">
+                    <form id="login-form">
                       <div class="form-group">
                           <input id="login_username" class="form-control" type="text" placeholder="Email" required>
                       </div>
