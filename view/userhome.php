@@ -1,3 +1,28 @@
+<script>
+    $(document).ready(function (){
+        $(document).on('click','.post-photo',function(){
+            //var service_id = $(this).attr("id");
+           /* $.ajax({
+                url:"../controller/fetch-service-handler.php",
+                method: "post",
+                data: {service_id:service_id},
+                dataType: "json",
+                cache: false,
+                success:function (data) {
+                    $('#update_service_name').val(data.service_name);
+                    $('#update_service_charge').val(data.service_charge);
+                    $('#update_service_description').val(data.description);
+                    $('#update_service_duration').val(data.duration);
+                    $('#update_commission').val(data.commission_percentage);
+                    $('#update_service_id').val(data.service_id);
+                    jQuery.noConflict();
+                    $('#add_data_Modal').modal('show');
+                }
+            });
+        });*/
+    });
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -31,7 +56,7 @@
           				<span class="icon-bar"></span>
           				<span class="icon-bar"></span>
                       </button>
-                      <a href="/" class="navbar-brand logo">CLiMaX</a>
+                        <img id="img_logo" src="../images/CLiMaX%20logo.png">
                   	</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-left">
@@ -83,22 +108,22 @@
 
                             <div class="categories col-sm-2" id="sticky">
 
-                                <div class="col-xs-12" id="sticky-anchor">
-                                    <img src="../images/transport_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/technology_logo.jpg" class="category-items">
-                                </div>
-                                <div class=" col-xs-12 ">
-                                    <img src="../images/education_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/social_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/other_logo.jpg" class="category-items">
-                                </div>>
-                         </div> 
+                                    <div class="col-xs-12" id="sticky-anchor">
+                                        <img src="../images/transport_logo.jpg" class="category-items">
+                                    </div>
+                                    <div class="col-xs-12 ">
+                                        <img src="../images/technology_logo.jpg" class="category-items">
+                                    </div>
+                                    <div class=" col-xs-12 ">
+                                        <img src="../images/education_logo.jpg" class="category-items">
+                                    </div>
+                                    <div class="col-xs-12 ">
+                                        <img src="../images/social_logo.jpg" class="category-items">
+                                    </div>
+                                    <div class="col-xs-12 ">
+                                        <img src="../images/other_logo.jpg" class="category-items">
+                                    </div>>
+                         </div>
 
                           <!-- main col right -->
                           <div class="col-sm-10 pull-right" style="padding-top: 10px">
@@ -109,7 +134,7 @@
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe your problem"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
@@ -210,6 +235,25 @@
     </div>
 </div>
 
+
+<!-- model to display dialog -->
+<div id="msg_Modal" class="modal fade text-center">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+                <h3 class="modal-title">Message</h3>
+            </div>
+            <div class="modal-body">
+                <div id="msg_result">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--post modal-->
 <div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">

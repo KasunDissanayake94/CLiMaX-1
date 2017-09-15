@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 06:24 PM
+-- Generation Time: Sep 15, 2017 at 09:19 PM
 -- Server version: 5.7.9
 -- PHP Version: 5.6.16
 
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `cust_address` varchar(100) DEFAULT NULL,
   `cust_gender` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`cust_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customer`
@@ -90,7 +90,12 @@ CREATE TABLE IF NOT EXISTS `customer` (
 INSERT INTO `customer` (`cust_id`, `cust_name`, `cust_email`, `cust_phone`, `cust_address`, `cust_gender`) VALUES
 (1, 'Kasun Dissanayake', 'kasunprageethdissanayake@gmail.com', 711625552, 'Panadura', 'Male'),
 (2, 'Hisan Hunais', 'hisan.live@gmail.com', 762345443, 'Dehiwala', 'Male'),
-(5, 'Dulmina', 'dula@gmail.com', NULL, NULL, NULL);
+(5, 'Dulmina', 'dula@gmail.com', NULL, NULL, NULL),
+(6, 'Dineth Kariyawasam', 'dinethkariyawasam@gmail.com', 775125698, 'Nittambuwa', 'Male'),
+(7, 'Jane De Souza', 'jane@yahoo.com', 774589874, 'Kolpity', 'Female'),
+(8, 'Amali Perera', 'amali@gmail.com', 771254789, 'Kandy', 'Female'),
+(9, 'Mohombi ', 'mohombi@gmail.com', 714558865, 'Panadura', 'Male'),
+(10, 'Harindi Alwis', 'harindi@gmail.com', 778954123, 'Ratnapura', 'Female');
 
 -- --------------------------------------------------------
 
@@ -136,7 +141,10 @@ CREATE TABLE IF NOT EXISTS `customer_problem` (
 
 INSERT INTO `customer_problem` (`cust_id`, `prob_id`, `prob_description`, `prob_date`, `cat_id`, `rate`) VALUES
 (1, 1, 'I think all of you have this problem. "Why don''t bus conductors give change?" Can''t we solve this problem.', '2017-09-14 10:14:27', 1, 0),
-(2, 2, '"Isn''t it going to be great if we arrange a dengue campaign in Colombo area?"', '2017-09-13 00:00:00', 4, 0);
+(2, 2, '"Isn''t it going to be great if we arrange a dengue campaign in Colombo area?"', '2017-09-13 00:00:00', 4, 0),
+(5, 3, 'Stray Dogs chasing us when jogging? Am I correct? Can''t we stop this?', '2017-09-16 04:11:18', 5, 0),
+(6, 4, 'Any smart way to do garbage disposal? Like using IoT anything?', '2017-09-12 05:14:10', 5, 0),
+(8, 5, 'We don''t have a proper library in Kandy Baalika Vidhyala? Can anyone look into this?', '2017-09-11 17:09:22', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -182,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `password`, `last_login`, `is_deleted`, `type`, `first_time`) VALUES
-(18, 'Wasura', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-15 23:49:25', 0, 'Customer', 0),
+(18, 'Wasura', 'wasuradananjith@gmail.com', '900150983cd24fb0d6963f7d28e17f72', '2017-09-16 02:47:16', 0, 'Customer', 0),
 (26, 'Dulmina', 'dula@gmail.com', '900150983cd24fb0d6963f7d28e17f72', NULL, 0, 'Customer', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

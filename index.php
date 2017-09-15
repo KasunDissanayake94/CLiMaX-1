@@ -28,7 +28,8 @@ $connection = $db->connect();
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<!--[if lt IE 9]>
+
+        <!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
@@ -94,18 +95,18 @@ $connection = $db->connect();
                          
                           
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                          <div id="#content" class="col-sm-10 pull-right" style="padding-top: 10px">
                               <?php
 
-                                    $stock_list="";
+                                    $problem_list="";
                                   if (mysqli_num_rows($result_set)>0) {
                                       while($problem = mysqli_fetch_assoc($result_set)){
-                                          $stock_list.= "<div class=\"panel panel-default\">";
-                                          $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
-                                          $stock_list.= "<div class=\"panel-body\">";
-                                          $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
+                                          $problem_list.= "<div class=\"panel panel-default ${problem['cat_name']}\">";
+                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p> <h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></div>";
+                                          $problem_list.= "<div class=\"panel-body\">";
+                                          $problem_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
                                           /*$stock_list.= "<td>{$problem['rate']}</td>";*/
-                                          $stock_list.= "<div class=\"clearfix\"></div>
+                                          $problem_list.= "<div class=\"clearfix\"></div>
                                     <!--<hr>
                                     Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
                                     Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
@@ -113,72 +114,12 @@ $connection = $db->connect();
                                   </div>
                                </div>";
                                       }
-                                      $stock_list .= "</tbody>
-                                        </table>";
-                                      echo $stock_list;
+                                      echo $problem_list;
 
                                   } else {
                                       die("Something happen !!!");
                                   }
                               ?>
-
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Bootply Editor &amp; Code Library</h4></div>
-                                  <div class="panel-body">
-                                    <p><img src="//placehold.it/150x150" class="img-circle pull-right"><?php /*echo $cust_name.'<br>'. $comment */?></p>
-                                    <div class="clearfix"></div>
-                                    <hr>
-                                    Design, build, test, and prototype using Bootstrap in real-time from your Web browser. Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap. Find and showcase Bootstrap-ready snippets in the 100% free Bootply.com code repository.
-                                  </div>
-                               </div>
-                            
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Stackoverflow</h4></div>
-                                  <div class="panel-body">
-                                    <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
-                                    <div class="clearfix"></div>
-                                    <hr>
-                                    
-                                    <p>If you're looking for help with Bootstrap code, the <code>twitter-bootstrap</code> tag at <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a> is a good place to find answers.</p>
-                                    
-                                    <hr>
-                                    <form>
-                                    <div class="input-group">
-                                      <div class="input-group-btn">
-                                      <button class="btn btn-default">+1</button><button class="btn btn-default"><i class="glyphicon glyphicon-share"></i></button>
-                                      </div>
-                                      <input type="text" class="form-control" placeholder="Add a comment..">
-                                    </div>
-                                    </form>
-                                    
-                                  </div>
-                               </div>
-
-                               <div class="panel panel-default">
-                                 <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>Portlet Heading</h4></div>
-                                  <div class="panel-body">
-                                    <ul class="list-group">
-                                    <li class="list-group-item">Modals</li>
-                                    <li class="list-group-item">Sliders / Carousel</li>
-                                    <li class="list-group-item">Thumbnails</li>
-                                    </ul>
-                                  </div>
-                               </div>
-                            
-                               <div class="panel panel-default">
-                                <div class="panel-thumbnail"><img src="/assets/example/bg_4.jpg" class="img-responsive"></div>
-                                <div class="panel-body">
-                                  <p class="lead">Social Good</p>
-                                  <p>1,200 Followers, 83 Posts</p>
-                                  
-                                  <p>
-                                    <img src="https://lh6.googleusercontent.com/-5cTTMHjjnzs/AAAAAAAAAAI/AAAAAAAAAFk/vgza68M4p2s/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-6aFMDiaLg5M/AAAAAAAAAAI/AAAAAAAABdM/XjnG8z60Ug0/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                    <img src="https://lh4.googleusercontent.com/-9Yw2jNffJlE/AAAAAAAAAAI/AAAAAAAAAAA/u3WcFXvK-g8/s28-c-k-no/photo.jpg" width="28px" height="28px">
-                                  </p>
-                                </div>
-                              </div>
-                            
                           </div>
                        </div><!--/row-->
                       
@@ -233,5 +174,7 @@ $connection = $db->connect();
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+        <script src="js/loader.js" type="text/javascript"></script>
+
 	</body>
 </html>
