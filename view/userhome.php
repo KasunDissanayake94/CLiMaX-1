@@ -1,3 +1,17 @@
+<?php session_start() ?>
+
+<?php require_once('../model/Database.php');
+$db = new Database();
+$db->connect();
+?>
+
+<?php
+// checking if an user is logged in
+if(!isset($_SESSION['id']) || ($_SESSION['type']!="Customer")){
+    header ('Location: ../index.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
