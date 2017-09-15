@@ -50,7 +50,7 @@ $connection = $db->connect();
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                       </button>
-                      <a href="/" class="navbar-brand logo">CLiMaX</a>
+                      <img id="img_logo" src="../images/CLiMaX%20logo.png">
                     </div>
                     <nav class="collapse navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-left">
@@ -143,18 +143,18 @@ $connection = $db->connect();
 
                 <?php
 
-                                    $stock_list="";
+                                    $problem_list="";
                                     $problemid = "";
                                   if (mysqli_num_rows($result_set)>0) {
                                       while($problem = mysqli_fetch_assoc($result_set)){
                                           $problemid = $problem['prob_id'];
-                                          $stock_list.= "<div class=\"panel panel-default\">";
-                                          $stock_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p>
+                                          $problem_list.= "<div class=\"panel panel-default\">";
+                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p>
                                           <a href='commentPage.php?id=$problemid'><h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></a></div>";
-                                          $stock_list.= "<div class=\"panel-body\">";
-                                          $stock_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
+                                          $problem_list.= "<div class=\"panel-body\">";
+                                          $problem_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
                                           /*$stock_list.= "<td>{$problem['rate']}</td>";*/
-                                          $stock_list.= "<div class=\"clearfix\">
+                                          $problem_list.= "<div class=\"clearfix\">
                                     <!--<hr>
                                     Design, build, test, and prototype using Bootstrap in real-time from your Web browser. 
                                     Bootply combines the power of hand-coded HTML, CSS and JavaScript with the benefits of responsive design using Bootstrap.
@@ -162,9 +162,9 @@ $connection = $db->connect();
                                   </div>
                                </div>";
                                       }
-                                      $stock_list .= "</tbody>
+                                      $problem_list .= "</tbody>
                                         </table>";
-                                      echo $stock_list;
+                                      echo $problem_list;
                                      
                                     echo "</div>";
 

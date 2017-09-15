@@ -1,4 +1,7 @@
+<?php session_start() ?>
+
 <?php 
+
 		if(isset($_POST['commentBtn']))
 		{
 			require("../model/Database.php");
@@ -11,7 +14,7 @@
       $probID = $_GET['id'];  
       $query = "SELECT com_id FROM comment_2";
       $query_run = $db->executeQuery($query);
-      $user = 1;
+      $user = $_SESSION['user_id'];
       $oldno = mysqli_num_rows($query_run);
       $newno = $oldno + 1;
       //$prefix = "REV";

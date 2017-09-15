@@ -6,10 +6,10 @@ require('../model/Database.php');
 // making connection
 $db = new Database();
 $connection = $db->connect();
-
+    echo $_GET['id'];
 
 // prepare database query
-    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date,p.prob_id FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id ORDER BY p.prob_date DESC";
+    $query = "SELECT c.cust_name,p.prob_description,p.rate,g.cat_name,p.prob_date,p.prob_id FROM customer_problem p,customer c,category g WHERE c.cust_id=p.cust_id AND g.cat_id=p.cat_id AND p.prob_id = {$_GET['id']} ORDER BY p.prob_date DESC";
 
     $result_set = $db->executeQuery($query);
     //$problemid = "";
