@@ -105,7 +105,7 @@
                 <div class="padding">
                 
                     <div class="full col-sm-9" style="padding: 50px;">
-                      <div class="col-md-6">
+                      <div class="col-md-6" style="">
                        <img src="../img/bg.png" >
                     	  </div> 
                     	  <div class="col-md-5">
@@ -116,7 +116,7 @@
                           <!-- Categories -->
 
 
-                            <div class="categories col-sm-2" id="sticky">
+                           <!-- <div class="categories col-sm-2" id="sticky">
 
                                     <div class="col-xs-12" id="sticky-anchor">
                                         <img src="../images/transport_logo.jpg" class="category-items">
@@ -132,11 +132,12 @@
                                     </div>
                                     <div class="col-xs-12 ">
                                         <img src="../images/other_logo.jpg" class="category-items">
-                                    </div>>
-                         </div>
+                                    </div>
+                         </div>-->
+                          
 
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                         <!-- <div class="col-sm-10 pull-right" style="padding-top: 10px">
                                 <div class="row	"> 
                                   <div class="well  col-sm-5"> 
                                    <form class="form-horizontal" role="form">
@@ -221,7 +222,7 @@
                                 </div>
                               </div>
                             
-                          </div>
+                          </div>-->
                        </div><!--/row-->
               
                         <div class="row" id="footer">    
