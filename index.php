@@ -120,25 +120,8 @@ if (empty($errors)) {
                      	 <!-- content -->                      
                       	<div class="row">
                           <!-- Categories -->
-                         
-                     
-                            <div class="categories col-sm-2" id="sticky">
-                             
-                         	<div class="col-xs-12" id="sticky-anchor" style="background-image: url(images/transport_logo.jpg)">
-                         		
-                         	</div>
-                         	<div class="col-xs-12 " style="background-image: url(images/technology_logo.jpg)">
-                                
-                         	</div>
-                         	        <div class="col-xs-12 " style="background-image: url(images/education_logo.jpg)">
-                                
-                         	</div>
-                         	      <div class="col-xs-12 " style="background-image: url(images/faces.jpg)">
-                                
-                         	</div>
-                         	    <div class="col-xs-12 " style="background-image: url(images/other_logo.jpg)">
-                                
-                         	</div>
+
+                            <?php include 'assets/php/category.php';?>
                          </div> 
 
                            		
