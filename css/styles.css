@@ -297,7 +297,7 @@ small.text-muted {
 }
 
 img.category-items:hover{
-    background-color: #fefff6;
+   width: 150px;
 }
 
 #sticky.stick {

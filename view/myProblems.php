@@ -121,8 +121,6 @@
                                         <a href="#" class="pull-right">View all</a>
                                       </div>
                                     </div>
-                
-                                  
                                  </div>
                                   <div class="panel-body">
                                     <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
