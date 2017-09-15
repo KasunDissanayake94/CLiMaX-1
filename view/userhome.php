@@ -29,11 +29,21 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>CliMax-Home</title>
+        <style>
+            img{
+                max-width:180px;
+            }
+            input[type=file]{
+                padding:10px;
+                background:#2d2d2d;}
+        </style>
+        <link href="css/popup.css" rel="stylesheet">
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="../js/popup.js"></script>
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -71,20 +81,20 @@
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i style="font-size: 16px;" class="fa fa-user-circle" aria-hidden="true"></i></a>
                         <ul class="dropdown-menu">
-                          <li><a href="">My Problems</a></li>
-                          <li><a href="">Donation Plans</a></li>
+                          <li><a href="myProblems.php">My Problems</a></li>
+                          <li><a href="mydonations.php">Donation Plans</a></li>
                           <li><a href="">Settings</a></li>
-                          <li><a href="">Logout</a></li>
+                          <li><a href="../index.php">Logout</a></li>
                         </ul>
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li>
-                        <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
+                      <li style="background-color:#4D0066;">
+                        <a href=""><i class="fa fa-home" style="font-size: 16px; " aria-hidden="true"></i> Home</a>
                       </li>
   
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
+                        <a href="../index.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
@@ -132,7 +142,7 @@
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem"></textarea>
+                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
                                     </div>
                                     <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
@@ -143,7 +153,7 @@
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><a href=""><i class="fa fa-picture-o" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
 							  </div></div>
                             
@@ -236,24 +246,6 @@
 </div>
 
 
-<!-- model to display dialog -->
-<div id="msg_Modal" class="modal fade text-center">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
-                <h3 class="modal-title">Message</h3>
-            </div>
-            <div class="modal-body">
-                <div id="msg_result">
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--post modal-->
 <div id="postModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -273,16 +265,18 @@
       <div class="modal-footer">
           <div>
           <button class="btn btn-primary btn-sm" data-dismiss="modal" aria-hidden="true">Post</button>
-            <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href=""><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
+            <ul class="pull-left list-inline"><li><a href=""><i class="glyphicon glyphicon-upload"></i></a></li><li><a href="" onClick="return popup(this, 'notes')"><i class="glyphicon glyphicon-camera"></i></a></li><li><a href=""><i class="glyphicon glyphicon-map-marker"></i></a></li></ul>
 		  </div>	
       </div>
   </div>
   </div>
 </div>
-	<!-- script references -->
-	
-	
-		<script src="../js/bootstrap.min.js"></script>
-		<script src="../js/scripts.js"></script>
+
+
 	</body>
+<script>
+    document.getElementById("selectedFile").onchange = function () {
+    document.getElementById("uploadFile").value = this.value;
+};
+</script>
 </html>
