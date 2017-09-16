@@ -107,18 +107,18 @@ $connection = $db->connect();
                          </div> 
 
                           <!-- main col right -->
-                          <div class="col-sm-10 pull-right" style="padding-top: 10px">
+                          <div class="col-sm-10 pull-right" id="newsfeed" style="padding-top: 10px">
                                 <div class="row "> 
                                   <div class="well  col-sm-5"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem" ></textarea>
+                                      <textarea class="form-control" id="details" placeholder="Describe your problem" ></textarea>
                                       <div id="uploadFile"></div>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li>
+                                    <button class="btn btn-primary pull-right post-photo" type="button" onClick="showPost();">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li>
                                     <li>
-                                    	<select>
+                                    	<select id="cat">
                                   		  	<option>Select category</option>
                                    		  	<option value="Transport">Transport</option>
                                     		<option value="Technology">Technology</option>
@@ -129,7 +129,7 @@ $connection = $db->connect();
                                     </li></ul>
                                   </form>
                               </div>
-                              <div class="well col-sm-6 pull-right"> 
+                              <div class="well col-sm-6 pull-right" id="target"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us What you have</h4>
                                      <div class="form-group" style="padding:14px;">
@@ -254,6 +254,14 @@ $connection = $db->connect();
 document.getElementById("selectedFile1").onchange = function () {
     document.getElementById("uploadFile1").value = this.value;
 };
+function showPost(){
+		var details=document.getElementById('details').value;
+		var cat=document.getElementById('cat').value;
+	
+	
+
+$("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>Your new Post-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\"><img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">"+details+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
+		}
 </script>
   </body>
 </html>
