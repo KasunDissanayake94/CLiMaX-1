@@ -116,7 +116,17 @@ $connection = $db->connect();
                                       <textarea class="form-control" placeholder="Describe your problem" ></textarea>
                                       <div id="uploadFile"></div>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li>
+                                    <li>
+                                    	<select>
+                                  		  	<option>Select category</option>
+                                   		  	<option value="Transport">Transport</option>
+                                    		<option value="Technology">Technology</option>
+                                    		<option value="Education">Education</option>
+                                    		<option value="Social">Social</option>
+                                    		<option value="Other">Other</option>
+                                    	</select>
+                                    </li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
@@ -125,7 +135,16 @@ $connection = $db->connect();
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li>
+                                    	<select>
+                                  		  	<option>Select category</option>
+                                   		  	<option value="Transport">Transport</option>
+                                    		<option value="Technology">Technology</option>
+                                    		<option value="Education">Education</option>
+                                    		<option value="Social">Social</option>
+                                    		<option value="Other">Other</option>
+                                    	</select>
+                                    </li></ul>
                                   </form>
                 </div></div>
                 <?php
