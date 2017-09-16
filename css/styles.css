@@ -1,12 +1,26 @@
 /* custom template */
-html, body {
+@font-face{
+    font-family: myfont;
+    src: url('../fonts/Prototype.ttf');
+}
+
+@font-face{
+    font-family: myfont2;
+    src: url('../fonts/Traffolight.otf');
+}
+
+
+html, body{
    height: 100%;
-   font-family:verdana,arial,sans-serif;
+   font-family:myfont,verdana,arial,sans-serif;
    color:#555555;
 }
 
+h1,h2,h3,h4{
+    font-family:myfont,sans-serif;
+}
 .nav {
-   font-family:Arial,sans-serif;
+   font-family:myfont2,sans-serif;
    font-size:13px;
 }
 
@@ -75,7 +89,7 @@ hr {
     border-width:0;
 	background-color:#6F0082;
     color:#ffffff;
-    font-family:arial,sans-serif;
+    font-family:myfont2,sans-serif;
     top:0;
     position:fixed;
     width:inherit;
@@ -222,7 +236,7 @@ h1,h2,h3 {
 }
 
 small.text-muted {
-  font-family:courier,courier-new,monospace;
+  font-family:myfont2,courier-new,monospace;
 }
 
 /* adjust the contents on smaller devices */
@@ -298,6 +312,11 @@ small.text-muted {
 
 img.category-items:hover{
    width: 150px;
+}
+
+h5 {
+    text-align: center;
+    font-weight: bold;
 }
 
 #sticky.stick {

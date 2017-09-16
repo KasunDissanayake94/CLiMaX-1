@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start()?>
 <?php
 require('../model/Database.php');
 
@@ -73,7 +73,10 @@ $connection = $db->connect();
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li style="background-color:#4D0066;">
+                        <li>
+                            <a style="font-size: 16px;" aria-hidden="true"><?php echo $_SESSION['name'];?></a>
+                        </li>
+                      <li>
                         <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
@@ -100,23 +103,7 @@ $connection = $db->connect();
                           <!-- Categories -->
 
 
-                            <div class="categories col-sm-2" id="sticky">
-
-                                <div class="col-xs-12" id="sticky-anchor">
-                                    <img src="../images/transport_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/technology_logo.jpg" class="category-items">
-                                </div>
-                                <div class=" col-xs-12 ">
-                                    <img src="../images/education_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/social_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/other_logo.jpg" class="category-items">
-                                </div>>
+                            <?php include '../assets/php/category2.php';?>
                          </div> 
 
                           <!-- main col right -->
@@ -126,9 +113,20 @@ $connection = $db->connect();
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
+                                      <textarea class="form-control" placeholder="Describe your problem" ></textarea>
+                                      <div id="uploadFile"></div>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li>
+                                    <li>
+                                    	<select>
+                                  		  	<option>Select category</option>
+                                   		  	<option value="Transport">Transport</option>
+                                    		<option value="Technology">Technology</option>
+                                    		<option value="Education">Education</option>
+                                    		<option value="Social">Social</option>
+                                    		<option value="Other">Other</option>
+                                    	</select>
+                                    </li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
@@ -137,10 +135,18 @@ $connection = $db->connect();
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li>
+                                    	<select>
+                                  		  	<option>Select category</option>
+                                   		  	<option value="Transport">Transport</option>
+                                    		<option value="Technology">Technology</option>
+                                    		<option value="Education">Education</option>
+                                    		<option value="Social">Social</option>
+                                    		<option value="Other">Other</option>
+                                    	</select>
+                                    </li></ul>
                                   </form>
                 </div></div>
-
                 <?php
 
                                     $problem_list="";
@@ -149,7 +155,7 @@ $connection = $db->connect();
                                       while($problem = mysqli_fetch_assoc($result_set)){
                                           $problemid = $problem['prob_id'];
                                           $problem_list.= "<div class=\"panel panel-default\">";
-                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p>
+                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}<span class=\"badge badge-pill badge-info\" id=\"rate_count\"\">{$problem['rate']}</span></p>
                                           <a href='commentPage.php?id=$problemid'><h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></a></div>";
                                           $problem_list.= "<div class=\"panel-body\">";
                                           $problem_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
@@ -165,7 +171,7 @@ $connection = $db->connect();
                                       $problem_list .= "</tbody>
                                         </table>";
                                       echo $problem_list;
-                                     
+
                                     echo "</div>";
 
                                   } else {
@@ -235,7 +241,15 @@ $connection = $db->connect();
     <script src="../js/scripts.js"></script>
     <script>
     document.getElementById("selectedFile").onchange = function () {
-    document.getElementById("uploadFile").value = this.value;
+		if(this.value!=""){
+		var path=this.value.substr(12);
+		var relativepath="../images/";
+		var truepath=relativepath.concat(path);
+			var t1="<img src=\"";
+			var t2="\" style=\"width:70px;height:60px;\"> ";
+			var final=t1.concat(truepath).concat(t2);
+   $('#uploadFile').html(final);
+		}	
 };
 document.getElementById("selectedFile1").onchange = function () {
     document.getElementById("uploadFile1").value = this.value;
