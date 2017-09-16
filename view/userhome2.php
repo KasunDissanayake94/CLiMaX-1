@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<?php session_start()?>
 <?php
 require('../model/Database.php');
 
@@ -73,7 +73,10 @@ $connection = $db->connect();
                       </li>
                     </ul>
                     <ul class="nav navbar-nav pull-right">
-                      <li style="background-color:#4D0066;">
+                        <li>
+                            <a style="font-size: 16px;" aria-hidden="true"><?php echo $_SESSION['name'];?></a>
+                        </li>
+                      <li>
                         <a href=""><i class="fa fa-home" style="font-size: 16px;" aria-hidden="true"></i> Home</a>
                       </li>
   
@@ -100,23 +103,7 @@ $connection = $db->connect();
                           <!-- Categories -->
 
 
-                            <div class="categories col-sm-2" id="sticky">
-
-                                <div class="col-xs-12" id="sticky-anchor">
-                                    <img src="../images/transport_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/technology_logo.jpg" class="category-items">
-                                </div>
-                                <div class=" col-xs-12 ">
-                                    <img src="../images/education_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/social_logo.jpg" class="category-items">
-                                </div>
-                                <div class="col-xs-12 ">
-                                    <img src="../images/other_logo.jpg" class="category-items">
-                                </div>>
+                            <?php include '../assets/php/category2.php';?>
                          </div> 
 
                           <!-- main col right -->
@@ -141,7 +128,6 @@ $connection = $db->connect();
                                     <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                 </div></div>
-
                 <?php
 
                                     $problem_list="";
@@ -150,7 +136,7 @@ $connection = $db->connect();
                                       while($problem = mysqli_fetch_assoc($result_set)){
                                           $problemid = $problem['prob_id'];
                                           $problem_list.= "<div class=\"panel panel-default\">";
-                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}</p>
+                                          $problem_list.= "<div class=\"panel-heading\"><p class=\"pull-right\">{$problem['prob_date']}<span class=\"badge badge-pill badge-info\" id=\"rate_count\"\">{$problem['rate']}</span></p>
                                           <a href='commentPage.php?id=$problemid'><h4>"."{$problem['cust_name']}"." - "."{$problem['cat_name']}</h4></a></div>";
                                           $problem_list.= "<div class=\"panel-body\">";
                                           $problem_list.= "<p><!--<img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">-->{$problem['prob_description']}</p>";
@@ -166,7 +152,7 @@ $connection = $db->connect();
                                       $problem_list .= "</tbody>
                                         </table>";
                                       echo $problem_list;
-                                     
+
                                     echo "</div>";
 
                                   } else {

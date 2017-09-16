@@ -43,7 +43,7 @@
             <span class="icon-bar bar2"></span>
             <span class="icon-bar bar3"></span>
           </button>
-          <a class="navbar-brand" href="profile.html" id="#login_logo">CLiMaX</a>
+            <a class="navbar-brand" href="profile.html" id="#login_logo"><h1 style="font-size: 50px;">CLiMaX</h1></a>
         </div>
       </div>
     </nav>
