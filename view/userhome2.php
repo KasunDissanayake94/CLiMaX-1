@@ -129,7 +129,7 @@ $connection = $db->connect();
                                     </li></ul>
                                   </form>
                               </div>
-                              <div class="well col-sm-6 pull-right" style="height: 300px;" id="target"> 
+                              <div class="well col-sm-6 pull-right" id="target"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us What you have</h4>
                                      <div class="form-group" style="padding:14px;">
@@ -264,7 +264,10 @@ function showPost(){
 		var t1="<img src=\"";
 			var t2="\" style=\"width:200px;height:100px;\">";
 			var final=t1.concat(truepath).concat(t2);
-$("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>Your new Post-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\">"+details+"</br>"+ final+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
+	var d="<?php echo($_SESSION['name'])?>";
+$("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>"+d+"-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\">"+details+"</br></br>"+ final+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
+	document.getElementById('details').value="";
+	  $('#uploadFile').html("");
 		}
 </script>
   </body>
