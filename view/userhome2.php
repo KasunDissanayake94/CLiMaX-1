@@ -192,7 +192,7 @@ $connection = $db->connect();
                           </div>
                           <div class="col-sm-6">
                             <p>
-                            <a href="#" class="pull-right">TryCatch++ �Copyright 2017</a>
+                            <a href="#" class="pull-right">TryCatch++ &copy;Copyright 2017</a>
                             </p>
                           </div>
                         </div>
