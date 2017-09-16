@@ -129,7 +129,7 @@ $connection = $db->connect();
                                     </li></ul>
                                   </form>
                               </div>
-                              <div class="well col-sm-6 pull-right" id="target"> 
+                              <div class="well col-sm-6 pull-right" style="height: 300px;" id="target"> 
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us What you have</h4>
                                      <div class="form-group" style="padding:14px;">
@@ -257,10 +257,14 @@ document.getElementById("selectedFile1").onchange = function () {
 function showPost(){
 		var details=document.getElementById('details').value;
 		var cat=document.getElementById('cat').value;
-	
-	
-
-$("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>Your new Post-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\"><img src=\"//placehold.it/150x150\" class=\"img-circle pull-right\">"+details+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
+		var path=document.getElementById('selectedFile').value;
+	var path=path.substr(12);
+		var relativepath="../images/";
+		var truepath=relativepath.concat(path);
+		var t1="<img src=\"";
+			var t2="\" style=\"width:200px;height:100px;\">";
+			var final=t1.concat(truepath).concat(t2);
+$("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>Your new Post-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\">"+details+"</br>"+ final+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
 		}
 </script>
   </body>

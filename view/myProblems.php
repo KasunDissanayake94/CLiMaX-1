@@ -149,31 +149,7 @@ $connection = $db->connect();
                                   }
                               ?>
                             
-                               <!--<div class="panel panel-default">
-                                 <div class="panel-heading">
-                                    <div class="row">
-                                      <div class="col-md-6">
-                                        <h4>Stackoverflow</h4>
-                                      </div>
-                                      <div class="col-md-5">
-                                        <i class="fa fa-star-o pull-right" aria-hidden="true"></i>
-                                      </div>
-                                      <div class="col-md-1">
-                                        <a href="#" class="pull-right">View all</a>
-                                      </div>
-                                    </div>
-                                 </div>
-                                  <div class="panel-body">
-                                    <img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Keyword: Bootstrap</a>
-                                    <div class="clearfix"></div>
-                                    <hr>
-                                    
-                                    <p>If you're looking for help with Bootstrap code, the <code>twitter-bootstrap</code> tag at <a href="http://stackoverflow.com/questions/tagged/twitter-bootstrap">Stackoverflow</a> is a good place to find answers.</p>
-                                    
-                                    
-                                    
-                                  </div>
-                               </div>-->
+                               
 
                             
                           </div>
