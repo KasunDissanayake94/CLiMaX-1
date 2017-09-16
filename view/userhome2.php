@@ -81,7 +81,7 @@ $connection = $db->connect();
                       </li>
   
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
+                        <a href="../index.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     
