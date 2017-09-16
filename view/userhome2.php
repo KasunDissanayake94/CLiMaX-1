@@ -126,9 +126,10 @@ $connection = $db->connect();
                                    <form class="form-horizontal" role="form">
                                     <h4>Tell us your problem</h4>
                                      <div class="form-group" style="padding:14px;">
-                                      <textarea class="form-control" placeholder="Describe your problem" id="uploadFile"></textarea>
+                                      <textarea class="form-control" placeholder="Describe your problem" ></textarea>
+                                      <div id="uploadFile"></div>
                                     </div>
-                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right post-photo" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                               </div>
                               <div class="well col-sm-6 pull-right"> 
@@ -137,7 +138,7 @@ $connection = $db->connect();
                                      <div class="form-group" style="padding:14px;">
                                       <textarea class="form-control" placeholder="Describe what you got" id="uploadFile1"></textarea>
                                     </div>
-                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple="false" id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
+                                    <button class="btn btn-primary pull-right" type="button">Post</button><ul class="list-inline"><li><input type="file" multiple id="selectedFile1" style="display: none;" /><button type="button" value="" onclick="document.getElementById('selectedFile1').click();" ><i class="fa fa-picture-o" aria-hidden="true"></i></button></a></li><li><a href=""><i class="fa fa-video-camera" aria-hidden="true"></i></a></li><li><a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a></li></ul>
                                   </form>
                 </div></div>
 
@@ -235,7 +236,15 @@ $connection = $db->connect();
     <script src="../js/scripts.js"></script>
     <script>
     document.getElementById("selectedFile").onchange = function () {
-    document.getElementById("uploadFile").value = this.value;
+		if(this.value!=""){
+		var path=this.value.substr(12);
+		var relativepath="../images/";
+		var truepath=relativepath.concat(path);
+			var t1="<img src=\"";
+			var t2="\" style=\"width:70px;height:60px;\"> ";
+			var final=t1.concat(truepath).concat(t2);
+   $('#uploadFile').html(final);
+		}	
 };
 document.getElementById("selectedFile1").onchange = function () {
     document.getElementById("uploadFile1").value = this.value;
