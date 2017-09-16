@@ -53,9 +53,9 @@ $connection = $db->connect();
                       <img id="img_logo" src="../images/CLiMaX%20logo.png">
                     </div>
                     <nav class="collapse navbar-collapse" role="navigation">
-                    <form class="navbar-form navbar-left">
+                    <form class="navbar-form navbar-left" action="../controller/search.php">
                         <div class="input-group input-group-sm" style="max-width:360px;">
-                          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                          <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" value="">
                           <div class="input-group-btn">
                             <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                           </div>
@@ -81,7 +81,7 @@ $connection = $db->connect();
                       </li>
   
                       <li>
-                        <a href="view/login-form.php"><span class="badge">Log out</span></a>
+                        <a href="../index.php"><span class="badge">Log out</span></a>
                       </li>
                     </ul>
                     

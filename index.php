@@ -51,7 +51,7 @@ $connection = $db->connect();
           				<span class="icon-bar"></span>
           				<span class="icon-bar"></span>
                       </button>
-                        <img id="img_logo" src="images/CLiMaX%20logo.png">
+                        <a href="index.php"><img id="img_logo" src="images/CLiMaX%20logo.png"></a>
                   	</div>
                   	<nav class="collapse navbar-collapse" role="navigation">
                     <form class="navbar-form navbar-left">
