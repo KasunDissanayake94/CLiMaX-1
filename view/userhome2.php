@@ -262,7 +262,7 @@ function showPost(){
 		var relativepath="../images/";
 		var truepath=relativepath.concat(path);
 		var t1="<img src=\"";
-			var t2="\" style=\"width:200px;height:100px;\">";
+			var t2="\" style=\"width:800px;height:400px;\">";
 			var final=t1.concat(truepath).concat(t2);
 	var d="<?php echo($_SESSION['name'])?>";
 $("<div class=\"panel panel-default\"><div class=\"panel-heading\"><div class=\"row\"><div class=\"col-md-6\"><h4>"+d+"-"+cat+"</h4></div><div class=\"col-md-5\"><i class=\"fa fa-star-o pull-right\" aria-hidden=\"true\"></i></div><div class=\"col-md-1\"><a href=\"#\" class=\"pull-right\">View all</a></div></div></div><div class=\"panel-body\">"+details+"</br></br>"+ final+"<div class=\"clearfix\"></div><hr></div></div>").insertAfter( '#target' );
